@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
+  <link rel="mask-icon" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta name="description" content="教你搭建一个专业的论坛系统---Xenforo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你搭建一个专业的论坛系统---Xenforo">
+<meta property="og:url" content="http://blog.hexoian.cn/2020/04/01/xenforo_deploy/index.html">
+<meta property="og:site_name" content="yuzh的博客">
+<meta property="og:description" content="教你搭建一个专业的论坛系统---Xenforo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/HvfBCKjxsMOmklV.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/hzOu291DJTIjcHw.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/pm2l4TPy67DBbtM.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/DI8whbylKMUjqin.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/zJEtg2hAK8sFrc1.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/i8fsg32MNT6nBoL.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/CPbo8nOlDKYVj1m.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/Vi5lhdprxtzuj2e.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/3mrionYKcxjTJNC.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/p7lJDdTUSyFNnfQ.png">
+<meta property="og:image" content="https://i.loli.net/2020/04/02/Q9xHYyRk5BM8I7s.png">
+<meta property="article:published_time" content="2020-04-01T08:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-03T11:58:00.000Z">
+<meta property="article:author" content="yuzh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png">
+
+<link rel="canonical" href="http://blog.hexoian.cn/2020/04/01/xenforo_deploy/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>教你搭建一个专业的论坛系统---Xenforo | yuzh的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">yuzh的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">欢迎参观</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#教你搭建一个专业的论坛系统—Xenforo"><span class="nav-number">1.</span> <span class="nav-text">教你搭建一个专业的论坛系统—Xenforo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装宝塔Linux面板"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装宝塔Linux面板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载论坛资源包"><span class="nav-number">1.2.</span> <span class="nav-text">下载论坛资源包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在宝塔内添加动态网站"><span class="nav-number">1.3.</span> <span class="nav-text">在宝塔内添加动态网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入网站资源包"><span class="nav-number">1.4.</span> <span class="nav-text">导入网站资源包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为Xenforo配置中文语言包"><span class="nav-number">1.5.</span> <span class="nav-text">为Xenforo配置中文语言包</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yuzh</p>
+  <div class="site-description" itemprop="description">一个技术宅的小窝</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/2020/04/01/xenforo_deploy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuzh">
+      <meta itemprop="description" content="一个技术宅的小窝">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuzh的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          教你搭建一个专业的论坛系统---Xenforo
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-01 16:00:00" itemprop="dateCreated datePublished" datetime="2020-04-01T16:00:00+08:00">2020-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-03 19:58:00" itemprop="dateModified" datetime="2020-06-03T19:58:00+08:00">2020-06-03</time>
+              </span>
+
+          
+            <div class="post-description">教你搭建一个专业的论坛系统---Xenforo</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="note warning"><p>本文资源包<a href="https://www.lanzous.com/iastpmj" target="_blank" rel="noopener">点此下载</a>，密码为<strong>yuzh</strong></p>
+</div>
+
+<h1 id="教你搭建一个专业的论坛系统—Xenforo"><a href="#教你搭建一个专业的论坛系统—Xenforo" class="headerlink" title="教你搭建一个专业的论坛系统—Xenforo"></a>教你搭建一个专业的论坛系统—Xenforo</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装宝塔Linux面板"><a href="#安装宝塔Linux面板" class="headerlink" title="安装宝塔Linux面板"></a>安装宝塔Linux面板</h3><p>进入<a href="https://bt.cn" target="_blank" rel="noopener">宝塔官网</a>，参考官网文档下载安装。</p>
+<div class="note warning"><p>根据需要选择运行库！</p>
+<p>MySql至少需为5.7，php至少需为7.3！！</p>
+<p>如下图所示</p>
+<p><img src="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png" alt="运行库"></p>
+</div>
+
+<p><img src="" alt="安装环境"></p>
+<div class="note success"><p>经过漫长的等待，等待安装完成</p>
+</div>
+
+<hr>
+<h2 id="下载论坛资源包"><a href="#下载论坛资源包" class="headerlink" title="下载论坛资源包"></a>下载论坛资源包</h2><p>接下来，下载我打包的Xenforo包（有钱人请<a href="https://xenforo.com/" target="_blank" rel="noopener">支持正版！！</a>），并放到你服务器上。</p>
+<hr>
+<h2 id="在宝塔内添加动态网站"><a href="#在宝塔内添加动态网站" class="headerlink" title="在宝塔内添加动态网站"></a>在宝塔内添加动态网站</h2><p>如下图所示，自行配置，要记住mysql的账号和密码（不记住也可，可以自己去找）</p>
+<p><img src="https://i.loli.net/2020/04/02/HvfBCKjxsMOmklV.png" alt="新建网站"></p>
+<div class="note warning"><p>端口一定要记住！！</p>
+</div>
+
+<hr>
+<h2 id="导入网站资源包"><a href="#导入网站资源包" class="headerlink" title="导入网站资源包"></a>导入网站资源包</h2><p>将xenforo_2.1.8_Patch_1文件夹中的upload文件夹中的内容上传至网站的根目录（其实剪切过去更快），然后把upload文件夹中的内容剪切到根目录，结果如下图所示</p>
+<p><img src="https://i.loli.net/2020/04/02/hzOu291DJTIjcHw.png" alt="install"></p>
+<p>然后打开网站&lt;服务器IP&gt;:&lt;你之前设置的端口&gt;</p>
+<p>打开后可能会有下面的提示，可以在宝塔中更改php的配置—禁用函数</p>
+<p><img src="https://i.loli.net/2020/04/02/pm2l4TPy67DBbtM.png" alt="warning"></p>
+<p>找到exec，proc_open，popen这三项，删掉，重启php服务。</p>
+<p><img src="https://i.loli.net/2020/04/02/DI8whbylKMUjqin.png" alt="delete"></p>
+<p>重新进入网站，成功！</p>
+<p><img src="https://i.loli.net/2020/04/02/zJEtg2hAK8sFrc1.png" alt="success!!"></p>
+<p>点击next，输入mysql的账户和密码</p>
+<p><img src="https://i.loli.net/2020/04/02/i8fsg32MNT6nBoL.png" alt="账号密码"></p>
+<p>点击Save config，然后Contiune，Begin Installation</p>
+<p><img src="https://i.loli.net/2020/04/02/CPbo8nOlDKYVj1m.png" alt="processing..."></p>
+<p>等待1-5分钟，输入管理员用户信息（自己设置），下一步Send anonymous server statistics 不用选，没有用。</p>
+<p>最后，提示进入管理系统，自行登录。</p>
+<div class="note success"><p>Xenforo安装成功</p>
+</div>
+
+<hr>
+<h2 id="为Xenforo配置中文语言包"><a href="#为Xenforo配置中文语言包" class="headerlink" title="为Xenforo配置中文语言包"></a>为Xenforo配置中文语言包</h2><p>首先，进入论坛管理系统。</p>
+<p>进入Appearance-Languages</p>
+<p><img src="https://i.loli.net/2020/04/02/Vi5lhdprxtzuj2e.png" alt="language"></p>
+<p>点击“浏览”，上传资源包中的XenforoChinesePACK.xml，然后单击“Import”。结束后，选择“简体中文”。</p>
+<p><img src="https://i.loli.net/2020/04/02/3mrionYKcxjTJNC.png" alt="import"></p>
+<div class="note success"><p>中文语言包安装成功</p>
+</div>
+
+<hr>
+<p>然后，进入设置-选项-用户注册选项-为游客开启CAPTCHA，选择“使用问题 &amp; 回答 CAPTCHA”，然后单击“使用明确的问题”</p>
+<p><img src="https://i.loli.net/2020/04/02/p7lJDdTUSyFNnfQ.png" alt="CAPTCHA"></p>
+<p>设置好你自己的问题和答案，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/02/Q9xHYyRk5BM8I7s.png" alt="Q&amp;A"></p>
+<p>最后，进入设置-选项-邮件系统选项，设置好你自己的邮件，然后进入工具-邮件发出测试，测试你设置的邮箱是否可用。</p>
+<div class="note success"><p>配置成功！！</p>
+</div>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/25/linux_delete_large_file/" rel="prev" title="一句命令教你找到Linux中的特大文件">
+      <i class="fa fa-chevron-left"></i> 一句命令教你找到Linux中的特大文件
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/10/rpi_nextcloud_deploy/" rel="next" title="教你用树莓派来搭建一个NAS数据中心">
+      教你用树莓派来搭建一个NAS数据中心 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">@yuzh</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
