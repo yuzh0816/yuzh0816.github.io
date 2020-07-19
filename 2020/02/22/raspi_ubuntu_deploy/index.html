@@ -22,19 +22,19 @@
     var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
   </script>
 
-  <meta name="description" content="前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。   所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线  下载Ubuntu并完成烧录下载Ubuntu前往Ubuntu Wiki，下载ubuntu-18.04.3-preinstalled-server-armh">
+  <meta name="description" content="前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。   所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何为你心爱的树莓派4B装上Ubuntu Server 18.04 LTS (armhf)">
 <meta property="og:url" content="http://blog.hexoian.cn/2020/02/22/raspi_ubuntu_deploy/index.html">
 <meta property="og:site_name" content="yuzh的博客">
-<meta property="og:description" content="前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。   所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线  下载Ubuntu并完成烧录下载Ubuntu前往Ubuntu Wiki，下载ubuntu-18.04.3-preinstalled-server-armh">
+<meta property="og:description" content="前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。   所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.loli.net/2020/02/22/U2osiMEFJ7DTeOv.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/22/pQs5agCUucVvljM.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/22/EhB5u32tDrdbcSF.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/22/C82FMv9WzxUodye.png">
 <meta property="article:published_time" content="2020-02-22T13:00:00.000Z">
-<meta property="article:modified_time" content="2020-06-03T11:58:00.000Z">
+<meta property="article:modified_time" content="2020-07-19T15:09:41.513Z">
 <meta property="article:author" content="yuzh">
 <meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary">
@@ -240,7 +240,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:58:00" itemprop="dateModified" datetime="2020-06-03T19:58:00+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:09:41" itemprop="dateModified" datetime="2020-07-19T23:09:41+08:00">2020-07-19</time>
               </span>
 
           
@@ -260,6 +260,8 @@
 <blockquote>
 <p>所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线</p>
 </blockquote>
+<a id="more"></a>
+
 <h2 id="下载Ubuntu并完成烧录"><a href="#下载Ubuntu并完成烧录" class="headerlink" title="下载Ubuntu并完成烧录"></a>下载Ubuntu并完成烧录</h2><h3 id="下载Ubuntu"><a href="#下载Ubuntu" class="headerlink" title="下载Ubuntu"></a>下载Ubuntu</h3><p>前往<a href="https://wiki.ubuntu.com/ARM/RaspberryPi" target="_blank" rel="noopener">Ubuntu Wiki</a>，下载ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz</p>
 <p><img src="https://i.loli.net/2020/02/22/U2osiMEFJ7DTeOv.png" alt=" ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz "></p>
 <h3 id="烧录Ubuntu"><a href="#烧录Ubuntu" class="headerlink" title="烧录Ubuntu"></a>烧录Ubuntu</h3><h4 id="下载balelnaEtcher"><a href="#下载balelnaEtcher" class="headerlink" title="下载balelnaEtcher"></a>下载balelnaEtcher</h4><p>前往<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher官网</a>下载，版本自选。</p>

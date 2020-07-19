@@ -295,10 +295,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-07-14 21:20:39 / Modified: 23:24:23" itemprop="dateCreated datePublished" datetime="2020-07-14T21:20:39+08:00">2020-07-14</time>
+              <time title="Created: 2020-07-14 21:20:39" itemprop="dateCreated datePublished" datetime="2020-07-14T21:20:39+08:00">2020-07-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-19 23:10:52" itemprop="dateModified" datetime="2020-07-19T23:10:52+08:00">2020-07-19</time>
+              </span>
 
           
 
@@ -311,7 +317,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
+          <a id="more"></a>
+
+<ol>
 <li>Dijkstra(单源最短路径)</li>
 <li>P4779  <a href="https://www.luogu.com.cn/problem/P4779" target="_blank" rel="noopener">【模板】单源最短路径（标准版）</a></li>
 </ol>
@@ -365,7 +373,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 22:26:51" itemprop="dateModified" datetime="2020-07-09T22:26:51+08:00">2020-07-09</time>
+                <time title="Modified: 2020-07-19 23:10:22" itemprop="dateModified" datetime="2020-07-19T23:10:22+08:00">2020-07-19</time>
               </span>
 
           
@@ -379,7 +387,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://i.loli.net/2020/07/09/tQagoDJYXp53h7x.png" alt="题目"></p>
+          <a id="more"></a>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://i.loli.net/2020/07/09/tQagoDJYXp53h7x.png" alt="题目"></p>
 <p>不多赘述，直接看代码吧</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r,sum;<span class="comment">//l,r为左右节点的号码，sum为该节点作为子树的数量</span></span><br><span class="line">    <span class="keyword">int</span> val,cnt;<span class="comment">//值，出现次数</span></span><br><span class="line">&#125;ltt[maxn];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> lst=<span class="number">0</span>,root; <span class="comment">//lst最后一个节点的位置，控制ltt，root为根（ltt的位置，开始时不存在）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//预定义宏，懒人专用。</span></span><br><span class="line"><span class="comment">//ltt中的x随着ls中的x变化而变化</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ls(x) ltt[x].l</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rs(x) ltt[x].r</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">up</span><span class="params">(Node &amp;f,Node ls,Node rs)</span><span class="comment">//insert后的操作（提升操作）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    f.sum=f.cnt+ls.sum+rs.sum;<span class="comment">//重复次数加上左右节点的数值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;p,<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//动态开点（点为0，直接开点）</span></span><br><span class="line">    <span class="keyword">if</span>(!p)<span class="comment">//节点编号为0</span></span><br><span class="line">    &#123;</span><br><span class="line">        p=++lst;<span class="comment">//root=+lst</span></span><br><span class="line">        ltt[p].val=x; ltt[p].cnt=<span class="number">1</span>; ltt[p].sum=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val==x)<span class="comment">//重复情况，数值加一</span></span><br><span class="line">    &#123;</span><br><span class="line">        ltt[p].cnt++; ltt[p].sum++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val&lt;x)<span class="comment">//要插入的点比这个点的数值要大</span></span><br><span class="line">    &#123;</span><br><span class="line">        insert(rs(p),x);<span class="comment">//向右跑</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span><span class="comment">//相反后同上</span></span><br><span class="line">    &#123;</span><br><span class="line">        insert(ls(p),x);</span><br><span class="line">    &#125;</span><br><span class="line">    up(ltt[p],ltt[ls(p)],ltt[rs(p)]);<span class="comment">//IMPORTANT提升操作</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findth</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> x)</span><span class="comment">//查看某一个点(x)的排名</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!p) <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//p不存在（空节点），排名为一</span></span><br><span class="line">    <span class="keyword">int</span> cc=ltt[ls(p)].sum;<span class="comment">//查找p节点的左子树的数量</span></span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val==x)<span class="comment">//节点中的值和x点相同</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> cc+<span class="number">1</span>;<span class="comment">//比p小的所有数的数量+1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val&gt;x)<span class="comment">//节点中的值比x点大（向左子树跑）</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> findth(ls(p),x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span><span class="comment">//节点中的值比x点小（向右子树跑）</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> findth(rs(p),x)+cc+ltt[p].cnt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findkth</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> k)</span><span class="comment">//查找k点的排名（第k大的数字）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!p) <span class="keyword">return</span> p;</span><br><span class="line">    <span class="keyword">int</span> cc=ltt[ls(p)].sum;</span><br><span class="line">    <span class="keyword">if</span>(cc&gt;=k) <span class="keyword">return</span> findkth(ls(p),k);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(cc&lt;k &amp;&amp; cc+ltt[p].cnt&gt;=k) <span class="keyword">return</span> p;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> findkth(rs(p),k-cc-ltt[p].cnt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pre</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> x,<span class="keyword">int</span> ans)</span><span class="comment">//前驱</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!p) <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val&gt;=x)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> pre(ls(p),x,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> pre(rs(p),x,max(ans,ltt[p].val));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">nxt</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> x,<span class="keyword">int</span> ans)</span><span class="comment">//后继</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!p) <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="keyword">if</span>(ltt[p].val&lt;=x)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> nxt(rs(p),x,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> nxt(ls(p),x,min(ans,ltt[p].val));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//插入无限小和无限大</span></span><br><span class="line">    insert(root,<span class="number">-0x7fffffff</span>);</span><br><span class="line">    insert(root,<span class="number">0x7fffffff</span>);</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,a,b;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">        <span class="keyword">if</span>(a==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;findth(root,b)<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;ltt[findkth(root,b+<span class="number">1</span>)].val&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="number">3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> ans=pre(root,b,<span class="number">-0x7fffffff</span>);</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="number">4</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> ans=nxt(root,b,<span class="number">0x7fffffff</span>);</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="number">5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            insert(root,b);<span class="comment">//从根节点开始插入b</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -434,7 +444,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 22:28:59" itemprop="dateModified" datetime="2020-07-09T22:28:59+08:00">2020-07-09</time>
+                <time title="Modified: 2020-07-19 23:10:30" itemprop="dateModified" datetime="2020-07-19T23:10:30+08:00">2020-07-19</time>
               </span>
 
           
@@ -448,7 +458,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><img src="https://i.loli.net/2020/06/06/kdHaLBXghPuobDw.png" alt="题目"></p>
+          <a id="more"></a>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://i.loli.net/2020/06/06/kdHaLBXghPuobDw.png" alt="题目"></p>
 <p><img src="https://i.loli.net/2020/06/06/g9ICd5N4Yu1xrRz.png" alt="数据"></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
 <li>使用vector建立无权有向图，并使用迭代器对图排序</li>
@@ -506,7 +518,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-04 20:13:37" itemprop="dateModified" datetime="2020-06-04T20:13:37+08:00">2020-06-04</time>
+                <time title="Modified: 2020-07-19 23:10:25" itemprop="dateModified" datetime="2020-07-19T23:10:25+08:00">2020-07-19</time>
               </span>
 
           
@@ -520,7 +532,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>题目见下，来自洛谷</p>
+          <a id="more"></a>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>题目见下，来自洛谷</p>
 <p><img src="https://i.loli.net/2020/06/04/Rvqa5AQrxnEl3pb.png" alt="题目"></p>
 <p>思路比较简单</p>
 <ol>
@@ -577,7 +591,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:10:37" itemprop="dateModified" datetime="2020-07-19T23:10:37+08:00">2020-07-19</time>
               </span>
 
           
@@ -591,7 +605,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>John的农场在给奶牛挤奶前有很多杂务要完成，每一项杂务都需要一定的时间来完成它。比如：他们要将奶牛集合起来，将他们赶进牛棚，为奶牛清洗乳房以及一些其它工作。尽早将所有杂务完成是必要的，因为这样才有更多时间挤出更多的牛奶。当然，有些杂务必须在另一些杂务完成的情况下才能进行。比如：只有将奶牛赶进牛棚才能开始为它清洗乳房，还有在未给奶牛清洗乳房之前不能挤奶。我们把这些工作称为完成本项工作的准备工作。至少有一项杂务不要求有准备工作，这个可以最早着手完成的工作，标记为杂务11。John有需要完成的nn个杂务的清单，并且这份清单是有一定顺序的，杂务k(k&gt;1)k(k&gt;1)的准备工作只可能在杂务11至k-1k−1中。</p>
+          <a id="more"></a>
+
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>John的农场在给奶牛挤奶前有很多杂务要完成，每一项杂务都需要一定的时间来完成它。比如：他们要将奶牛集合起来，将他们赶进牛棚，为奶牛清洗乳房以及一些其它工作。尽早将所有杂务完成是必要的，因为这样才有更多时间挤出更多的牛奶。当然，有些杂务必须在另一些杂务完成的情况下才能进行。比如：只有将奶牛赶进牛棚才能开始为它清洗乳房，还有在未给奶牛清洗乳房之前不能挤奶。我们把这些工作称为完成本项工作的准备工作。至少有一项杂务不要求有准备工作，这个可以最早着手完成的工作，标记为杂务11。John有需要完成的nn个杂务的清单，并且这份清单是有一定顺序的，杂务k(k&gt;1)k(k&gt;1)的准备工作只可能在杂务11至k-1k−1中。</p>
 <p>写一个程序从11到nn读入每个杂务的工作说明。计算出所有杂务都被完成的最短时间。当然互相没有关系的杂务可以同时工作，并且，你可以假定John的农场有足够多的工人来同时完成任意多项任务。</p>
 <h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>第1行：一个整数nn，必须完成的杂务的数目(3 \le n \le 10,0003≤n≤10,000)；</p>
 <p>第22至(n+1)(n+1)行： 共有nn行，每行有一些用11个空格隔开的整数，分别表示：</p>
@@ -660,7 +676,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-04 20:19:50" itemprop="dateModified" datetime="2020-06-04T20:19:50+08:00">2020-06-04</time>
+                <time title="Modified: 2020-07-19 23:09:15" itemprop="dateModified" datetime="2020-07-19T23:09:15+08:00">2020-07-19</time>
               </span>
 
           
@@ -676,12 +692,14 @@
       
           <h1 id="简单科普拓扑排序"><a href="#简单科普拓扑排序" class="headerlink" title="简单科普拓扑排序"></a>简单科普拓扑排序</h1><p>来源：<a href="https://baike.baidu.com/item/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/5223807?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
 <p>对一个有向无环图(Directed Acyclic Graph简称DAG)G进行拓扑排序，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边&lt;u,v&gt;∈E(G)，则u在线性序列中出现在v之前。通常，这样的线性序列称为满足拓扑次序(Topological Order)的序列，简称拓扑序列。简单的说，由某个集合上的一个偏序得到该集合上的一个全序，这个操作称之为拓扑排序。</p>
-<h1 id="手写笔记"><a href="#手写笔记" class="headerlink" title="手写笔记"></a>手写笔记</h1><p>举个栗子：</p>
-<p>已知有课程1、2、3、4、5、6，且课程1、2完成后才可以完成课程3，课程三完成后才可以完成课程4、5，课程4、5完成后才可以完成课程6。</p>
-<p>于是可得下面这幅拓扑排序图</p>
-<p><img src="https://i.loli.net/2020/05/31/5JF2W36UHfOGZvD.png" alt="图一"></p>
-<p><img src="https://i.loli.net/2020/05/31/Sa61mkWEND4X7KG.png" alt="图二"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/31/topological-sort/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -731,7 +749,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:10:34" itemprop="dateModified" datetime="2020-07-19T23:10:34+08:00">2020-07-19</time>
               </span>
 
           
@@ -745,7 +763,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>改编自USACO2007Nov铜组Exploration</p>
+          <a id="more"></a>
+
+<h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>改编自USACO2007Nov铜组Exploration</p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>贝西在一条道路上旅行，道路上有许多地标，贝西想要在日落之前访问尽可能多的路标。将道路视为一条数轴，贝西从原点出发，道路上有n(1&lt;=n&lt;=50000)个地标，每个地标有一个坐标x[i](-100,000 ≤ xi ≤ 100,000)且地标的坐标各不相同，t(1≤ T ≤1000000000)分钟之后将会日落。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行：两个整数t,n</p>
 <p>第二行至第n+1行：地标的坐标x[i]</p>
@@ -831,7 +851,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:58:00" itemprop="dateModified" datetime="2020-06-03T19:58:00+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:09:28" itemprop="dateModified" datetime="2020-07-19T23:09:28+08:00">2020-07-19</time>
               </span>
 
           
@@ -845,27 +865,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1><div class="note info"><p>本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本</p>
-</div>
-
-<h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><p>宝塔的安装此处不在赘述，<a href="bt.cn">教程在此</a></p>
-<h3 id="安装php-7-2及以上版本，推荐7-3或7-4"><a href="#安装php-7-2及以上版本，推荐7-3或7-4" class="headerlink" title="安装php 7.2及以上版本，推荐7.3或7.4"></a>安装php 7.2及以上版本，推荐7.3或7.4</h3><p>php可在宝塔中安装，非常简单</p>
-<h3 id="安装Nginx或者Apache"><a href="#安装Nginx或者Apache" class="headerlink" title="安装Nginx或者Apache"></a>安装Nginx或者Apache</h3><p>同样可在宝塔软件中心中安装，但是Apache和Nginx只能安装一个，不可同时安装。配置差的机器推荐使用Nginx。</p>
-<h3 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h3><p>版本根据机器配置自行选择，同理不再赘述。</p>
-<h2 id="下载并安装Nextcloud"><a href="#下载并安装Nextcloud" class="headerlink" title="下载并安装Nextcloud"></a>下载并安装Nextcloud</h2><h3 id="下载Nextcloud"><a href="#下载Nextcloud" class="headerlink" title="下载Nextcloud"></a>下载Nextcloud</h3><p>前往<a href="https://hexoian.cn/resources/16/" target="_blank" rel="noopener">Hexoian论坛</a>，下载Nextcloud源码包。</p>
-<p>ps:速度会比官网下快不少哦</p>
-<h3 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h3><p>在宝塔的网站管理中新建网站，数据库也可不新建，但如果新建了，要记住账户密码。</p>
-<p><img src="https://i.loli.net/2020/05/07/uqoQ2p51bP7gIMx.png" alt="1.png"></p>
-<p>进入网站根目录，把下载的文件解压进去，像这样</p>
-<p><img src="https://i.loli.net/2020/05/07/VlA2fCHTJjnKyoQ.png" alt="2.png"></p>
-<p>打开你所设置的ip以及端口，然后会看到这个东西</p>
-<p><img src="https://i.loli.net/2020/05/07/AnxljVFWT1ocCIE.png" alt="3.png"></p>
-<p>设置好你自己的用户名和密码，不用安装哪些捆绑应用。NC默认使用SQLite如果想用Mysql数据库来存放的话，下面数据库那里展开，填写你数据库的信息。</p>
-<p>等待一会儿，然后可能会出错，重载下数据库配置，再重启下数据库，然后重启php，重启Apache或者Nginx，可能还会炸，重新注册个账号就能进了（名字要和之前不一样）</p>
-<p>一切就绪，会直接进入Nextcloud。</p>
-<p><img src="https://i.loli.net/2020/05/07/hSP2FsmpwM4BDIl.png" alt="4.png"></p>
-<p><img src="https://i.loli.net/2020/05/07/9uHyI76CVGkZPc4.png" alt="5.png"></p>
-<h2 id="安装完成！"><a href="#安装完成！" class="headerlink" title="安装完成！"></a>安装完成！</h2>
+          <h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/10/rpi_nextcloud_deploy/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

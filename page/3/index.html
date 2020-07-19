@@ -231,7 +231,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:57" itemprop="dateModified" datetime="2020-06-03T19:57:57+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:13:19" itemprop="dateModified" datetime="2020-07-19T23:13:19+08:00">2020-07-19</time>
               </span>
 
           
@@ -249,9 +249,14 @@
 <p>以a^11为例：</p>
 <p>11的二进制数为1011，二进制从右向左算，但乘出来的顺序是 a^(2^0)*a^(2^1)*a^(2^3)，是从左向右的。我们不断的让base *= base目的是累乘，以便随时对ans做出贡献。</p>
 <p>要理解base *= base这一步：因为base * base == base ^ 2，下一步再乘，就是(base ^ 2) * (base ^ 2) == base ^ 4，然后同理(base ^ 4) * (base ^ 4) == base ^ 8，由此可以做到base  base ^ 2  base ^ 4  base ^ 8  base ^ 16  base ^ 32…….指数正好是 2 ^ i 。再看上面的例子，a= (a ^ 1) * (a ^ 2) * (a ^ 8)，这三项就可以完美解决了，快速幂就是这样。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> x,y,ans;<span class="comment">//Bottom_Number,Time,Answer</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">qp</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">long</span> <span class="keyword">long</span> b)</span><span class="comment">//Quick Power</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">1</span>,cnt=a;</span><br><span class="line">    <span class="keyword">while</span>(b)<span class="comment">//Cacluate Answer</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)<span class="comment">//b is an odd number</span></span><br><span class="line">        &#123;</span><br><span class="line">            ans*=cnt;</span><br><span class="line">        &#125;</span><br><span class="line">        cnt*=cnt;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;<span class="comment">//AS b=b/2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qp2</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">long</span> <span class="keyword">long</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> r=<span class="number">1</span>,base=a;</span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(b%<span class="number">2</span>) r*=base;</span><br><span class="line">    base*=base;</span><br><span class="line">    b/=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    ans=qp(x,y);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>本文参考<a href="https://blog.csdn.net/liangllhahaha/article/details/82119378" target="_blank" rel="noopener">@LL_Leung</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/Fast_Exponentiation/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -301,7 +306,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-04 20:19:59" itemprop="dateModified" datetime="2020-06-04T20:19:59+08:00">2020-06-04</time>
+                <time title="Modified: 2020-07-19 23:13:28" itemprop="dateModified" datetime="2020-07-19T23:13:28+08:00">2020-07-19</time>
               </span>
 
           
@@ -318,17 +323,14 @@
           <h2 id="什么是辗转相除法"><a href="#什么是辗转相除法" class="headerlink" title="什么是辗转相除法"></a>什么是辗转相除法</h2><p>欧几里德算法又称辗转相除法，是指用于计算两个正整数a，b的最大公约数。</p>
 <p><a href="https://baike.baidu.com/item/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/1647675?fromtitle=%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95&fromid=4625352" target="_blank" rel="noopener">From Baidu</a></p>
 <h2 id="辗转相除法递归式"><a href="#辗转相除法递归式" class="headerlink" title="辗转相除法递归式"></a>辗转相除法递归式</h2><p><strong>gcd(a,b) = gcd(b,a mod b)</strong></p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>a可以表示成a = kb + r（a，b，k，r皆为正整数，且r&lt;b），则r = a mod b</p>
-<p>假设d是a,b的一个公约数，记作d|a,d|b，即a和b都可以被d整除。</p>
-<p>而r = a - kb，两边同时除以d，r/d=a/d-kb/d=m，由等式右边可知m为整数，因此d|r</p>
-<p>因此d也是b,a mod b的公约数</p>
-<p>假设d是b,a mod b的公约数, 则d|b,d|(a-k*b),k是一个整数。</p>
-<p>进而d|a.因此d也是a,b的公约数</p>
-<p>因此(a,b)和(b,a mod b)的公约数是一样的，其最大公约数也必然相等，得证。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>上代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r;</span><br><span class="line">    <span class="keyword">while</span>(n &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        r = m % n;</span><br><span class="line">        m = n;</span><br><span class="line">        n = r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;gcd(a,b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/Euclidean_Algorithm/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -378,7 +380,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:10:44" itemprop="dateModified" datetime="2020-07-19T23:10:44+08:00">2020-07-19</time>
               </span>
 
           
@@ -392,7 +394,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>此题<strong>最简单</strong>的方法，其实前面已经有大佬<a href="https://www.luogu.org/user/69196" target="_blank" rel="noopener">@SocietyNiu</a>讲过了，就是用<strong>Python</strong>做一个简单的打表</p>
+          <a id="more"></a>
+
+<p>此题<strong>最简单</strong>的方法，其实前面已经有大佬<a href="https://www.luogu.org/user/69196" target="_blank" rel="noopener">@SocietyNiu</a>讲过了，就是用<strong>Python</strong>做一个简单的打表</p>
 <p>步骤</p>
 <ol>
 <li>先输入打表后的数据</li>
@@ -457,7 +461,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:13:35" itemprop="dateModified" datetime="2020-07-19T23:13:35+08:00">2020-07-19</time>
               </span>
 
           
@@ -472,10 +476,14 @@
 
       
           <h5 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a><a href="https://blog.csdn.net/zhangfei2018/article/details/8107514" target="_blank" rel="noopener">参考博客</a></h5><h4 id=""><a href="#" class="headerlink" title=""></a><img src="http://5.135.58.179:7009/pictures/pro_pics/p40/1.PNG" alt="题目描述"></h4><p><strong>对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n<em>(n+1)/2的一半，即n</em>(n+1)/4由于两个子集中都是整数，所以n<em>(n+1)必为偶数，则可以设s=n</em>(n+1),并判断s%4 .则，s/=4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。</strong></p>
-<p>题解如下</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans[<span class="number">100</span>];</span><br><span class="line">	<span class="built_in">memset</span>(ans,<span class="number">0</span>,<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">int</span> n,s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	s=n*(n+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(s%<span class="number">4</span>!=<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	s/=<span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	ans[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(j=s;j&gt;=i;j--)</span><br><span class="line">			ans[j]+=ans[j-i];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans[s]/<span class="number">2</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/Bisection_Subset/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -525,7 +533,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:13:13" itemprop="dateModified" datetime="2020-07-19T23:13:13+08:00">2020-07-19</time>
               </span>
 
           
@@ -541,10 +549,14 @@
       
           <p>河内塔(Towers of Hanoi)是法国人M.Claus(Lucas)于1883年从泰国带至法国的，河内之塔为越战时北越的首都<br>，即现在的胡志明市；1883年法国数学家Edouar Lucas曾提及这个故事，据说创世纪时Benares有一座波罗教塔，<br>是由三支钻石棒所支撑，开始时神在第一根棒上放置64个由上至下依由小到大排列的金盘(Disc)，并命令僧侣将<br>所有的金盘从第一根石棒移至第三根石棒，且搬运过程中遵守大盘子在小盘子之下的原则，若每日仅搬一个盘子，<br>则当盘子全数搬运完毕之时，此塔将毁损，而也就是世界末日的来临之时。</p>
 <p>解法：<br>如果柱子标为ABC，要由A搬至C，在只有一个盘子时，就将它直接搬至C，当有两个盘子，就将B当作辅助柱。如果<br>盘数超过两个，将第三个以下的盘子遮起来，就很简单了，每次处理两个盘子，也就是：A-&gt;B，A-&gt;C，B-&gt;C这三个<br>步骤，而被遮住的部分，其实就是进入程式的递回处理。事实上，若有n个盘子，则先移动完毕所需次数为(2^n)-1，<br>所以当盘数为64时，则所需次数为(2^64)-1 = 18446744073709551615为5.05390248594782e+16年，也就是约5000<br>世纪，如果对这数字没什么概念，就假设每秒钟搬一个盘子好了，也要5850亿年左右。 </p>
-<p>C++解法</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> A, <span class="keyword">int</span> B, <span class="keyword">int</span> C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Move sheet %d from %c to %c\n"</span>, n, A, C);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        hanoi(n<span class="number">-1</span>, A, C, B);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Move sheet %d from %c to %c\n"</span>, n, A, C);</span><br><span class="line">        hanoi(n<span class="number">-1</span>, B, A, C);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入盘数: \n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    hanoi(n, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/Hanoi/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -594,7 +606,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 16:51:17" itemprop="dateModified" datetime="2020-07-09T16:51:17+08:00">2020-07-09</time>
+                <time title="Modified: 2020-07-19 23:13:54" itemprop="dateModified" datetime="2020-07-19T23:13:54+08:00">2020-07-19</time>
               </span>
 
           
@@ -608,7 +620,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Beta Test Was Finished</p>
+          <p>Beta Test Closed</p>
 
       
     </div>

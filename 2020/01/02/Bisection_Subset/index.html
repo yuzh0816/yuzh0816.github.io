@@ -22,16 +22,16 @@
     var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
   </script>
 
-  <meta name="description" content="参考博客对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n(n+1)&#x2F;2的一半，即n(n+1)&#x2F;4由于两个子集中都是整数，所以n(n+1)必为偶数，则可以设s&#x3D;n(n+1),并判断s%4 .则，s&#x2F;&#x3D;4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。 题解如下 123456789101112131415161">
+  <meta name="description" content="参考博客对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n(n+1)&#x2F;2的一半，即n(n+1)&#x2F;4由于两个子集中都是整数，所以n(n+1)必为偶数，则可以设s&#x3D;n(n+1),并判断s%4 .则，s&#x2F;&#x3D;4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="平分子集">
 <meta property="og:url" content="http://blog.hexoian.cn/2020/01/02/Bisection_Subset/index.html">
 <meta property="og:site_name" content="yuzh的博客">
-<meta property="og:description" content="参考博客对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n(n+1)&#x2F;2的一半，即n(n+1)&#x2F;4由于两个子集中都是整数，所以n(n+1)必为偶数，则可以设s&#x3D;n(n+1),并判断s%4 .则，s&#x2F;&#x3D;4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。 题解如下 123456789101112131415161">
+<meta property="og:description" content="参考博客对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n(n+1)&#x2F;2的一半，即n(n+1)&#x2F;4由于两个子集中都是整数，所以n(n+1)必为偶数，则可以设s&#x3D;n(n+1),并判断s%4 .则，s&#x2F;&#x3D;4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://5.135.58.179:7009/pictures/pro_pics/p40/1.PNG">
 <meta property="article:published_time" content="2020-01-02T13:12:52.000Z">
-<meta property="article:modified_time" content="2020-06-03T11:57:58.000Z">
+<meta property="article:modified_time" content="2020-07-19T15:13:35.604Z">
 <meta property="article:author" content="yuzh">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:57:58" itemprop="dateModified" datetime="2020-06-03T19:57:58+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:13:35" itemprop="dateModified" datetime="2020-07-19T23:13:35+08:00">2020-07-19</time>
               </span>
 
           
@@ -252,6 +252,8 @@
 
       
         <h5 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a><a href="https://blog.csdn.net/zhangfei2018/article/details/8107514" target="_blank" rel="noopener">参考博客</a></h5><h4 id=""><a href="#" class="headerlink" title=""></a><img src="http://5.135.58.179:7009/pictures/pro_pics/p40/1.PNG" alt="题目描述"></h4><p><strong>对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n<em>(n+1)/2的一半，即n</em>(n+1)/4由于两个子集中都是整数，所以n<em>(n+1)必为偶数，则可以设s=n</em>(n+1),并判断s%4 .则，s/=4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。</strong></p>
+<a id="more"></a>
+
 <p>题解如下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans[<span class="number">100</span>];</span><br><span class="line">	<span class="built_in">memset</span>(ans,<span class="number">0</span>,<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">int</span> n,s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	s=n*(n+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(s%<span class="number">4</span>!=<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	s/=<span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	ans[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">for</span>(j=s;j&gt;=i;j--)</span><br><span class="line">			ans[j]+=ans[j-i];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans[s]/<span class="number">2</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

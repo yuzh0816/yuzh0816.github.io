@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
   </script>
 
-  <meta name="description" content="教你用树莓派来搭建一个NAS数据中心本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本   安装前配置安装宝塔宝塔的安装此处不在赘述，教程在此 安装php 7.2及以上版本，推荐7.3或7.4php可在宝塔中安装，非常简单 安装Nginx或者Apache同样可在宝塔软件中心中安装，但是Apache和Nginx只能安装一个，不可同时安装。配置差的机器推荐使用Ngi">
+  <meta name="description" content="教你用树莓派来搭建一个NAS数据中心">
 <meta property="og:type" content="article">
 <meta property="og:title" content="教你用树莓派来搭建一个NAS数据中心">
 <meta property="og:url" content="http://blog.hexoian.cn/2020/05/10/rpi_nextcloud_deploy/index.html">
 <meta property="og:site_name" content="yuzh的博客">
-<meta property="og:description" content="教你用树莓派来搭建一个NAS数据中心本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本   安装前配置安装宝塔宝塔的安装此处不在赘述，教程在此 安装php 7.2及以上版本，推荐7.3或7.4php可在宝塔中安装，非常简单 安装Nginx或者Apache同样可在宝塔软件中心中安装，但是Apache和Nginx只能安装一个，不可同时安装。配置差的机器推荐使用Ngi">
+<meta property="og:description" content="教你用树莓派来搭建一个NAS数据中心">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.loli.net/2020/05/07/uqoQ2p51bP7gIMx.png">
 <meta property="og:image" content="https://i.loli.net/2020/05/07/VlA2fCHTJjnKyoQ.png">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/05/07/hSP2FsmpwM4BDIl.png">
 <meta property="og:image" content="https://i.loli.net/2020/05/07/9uHyI76CVGkZPc4.png">
 <meta property="article:published_time" content="2020-05-10T13:00:00.000Z">
-<meta property="article:modified_time" content="2020-06-03T11:58:00.000Z">
+<meta property="article:modified_time" content="2020-07-19T15:09:28.211Z">
 <meta property="article:author" content="yuzh">
 <meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary">
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:58:00" itemprop="dateModified" datetime="2020-06-03T19:58:00+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-19 23:09:28" itemprop="dateModified" datetime="2020-07-19T23:09:28+08:00">2020-07-19</time>
               </span>
 
           
@@ -255,7 +255,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1><div class="note info"><p>本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本</p>
+        <h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1><a id="more"></a>
+
+<div class="note info"><p>本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本</p>
 </div>
 
 <h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><p>宝塔的安装此处不在赘述，<a href="bt.cn">教程在此</a></p>
