@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="教你搭建一个专业的论坛系统---Xenforo">
@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/04/02/p7lJDdTUSyFNnfQ.png">
 <meta property="og:image" content="https://i.loli.net/2020/04/02/Q9xHYyRk5BM8I7s.png">
 <meta property="article:published_time" content="2020-04-01T08:00:00.000Z">
-<meta property="article:modified_time" content="2020-06-03T11:58:00.000Z">
+<meta property="article:modified_time" content="2020-07-26T05:51:13.856Z">
 <meta property="article:author" content="yuzh">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png">
@@ -129,15 +129,47 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
           
@@ -185,10 +217,17 @@
       </div>
   </nav>
 </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
       </section>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -197,10 +236,6 @@
       </header>
 
       
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -247,7 +282,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-03 19:58:00" itemprop="dateModified" datetime="2020-06-03T19:58:00+08:00">2020-06-03</time>
+                <time title="Modified: 2020-07-26 13:51:13" itemprop="dateModified" datetime="2020-07-26T13:51:13+08:00">2020-07-26</time>
               </span>
 
           
@@ -267,6 +302,8 @@
 
 <h1 id="教你搭建一个专业的论坛系统—Xenforo"><a href="#教你搭建一个专业的论坛系统—Xenforo" class="headerlink" title="教你搭建一个专业的论坛系统—Xenforo"></a>教你搭建一个专业的论坛系统—Xenforo</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装宝塔Linux面板"><a href="#安装宝塔Linux面板" class="headerlink" title="安装宝塔Linux面板"></a>安装宝塔Linux面板</h3><p>进入<a href="https://bt.cn" target="_blank" rel="noopener">宝塔官网</a>，参考官网文档下载安装。</p>
 <div class="note warning"><p>根据需要选择运行库！</p>
+<a id="more"></a>
+
 <p>MySql至少需为5.7，php至少需为7.3！！</p>
 <p>如下图所示</p>
 <p><img src="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png" alt="运行库"></p>
@@ -325,6 +362,23 @@
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>yuzh
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://blog.hexoian.cn/2020/04/01/xenforo_deploy/" title="教你搭建一个专业的论坛系统---Xenforo">http://blog.hexoian.cn/2020/04/01/xenforo_deploy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
 
@@ -425,6 +479,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

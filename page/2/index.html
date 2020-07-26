@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一个技术宅的小窝">
@@ -114,15 +114,47 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
           
@@ -169,10 +201,17 @@
       </div>
   </nav>
 </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
       </section>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -181,10 +220,6 @@
       </header>
 
       
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -833,7 +868,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-19 23:10:47" itemprop="dateModified" datetime="2020-07-19T23:10:47+08:00">2020-07-19</time>
+                <time title="Modified: 2020-07-26 13:50:06" itemprop="dateModified" datetime="2020-07-26T13:50:06+08:00">2020-07-26</time>
               </span>
 
           
@@ -847,10 +882,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h1 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(</span><br><span class="line">    <span class="string">"                ********\n"</span></span><br><span class="line">    <span class="string">"               ************\n"</span></span><br><span class="line">    <span class="string">"               ####....#.\n"</span></span><br><span class="line">    <span class="string">"             #..###.....##....\n"</span></span><br><span class="line">    <span class="string">"             ###.......######              ###            ###\n"</span></span><br><span class="line">    <span class="string">"                ...........               #...#          #...#\n"</span></span><br><span class="line">    <span class="string">"               ##*#######                 #.#.#          #.#.#\n"</span></span><br><span class="line">    <span class="string">"            ####*******######             #.#.#          #.#.#\n"</span></span><br><span class="line">    <span class="string">"           ...#***.****.*###....          #...#          #...#\n"</span></span><br><span class="line">    <span class="string">"           ....**********##.....           ###            ###\n"</span></span><br><span class="line">    <span class="string">"           ....****    *****....\n"</span></span><br><span class="line">    <span class="string">"             ####        ####\n"</span></span><br><span class="line">    <span class="string">"           ######        ######\n"</span></span><br><span class="line">    <span class="string">"##############################################################\n"</span></span><br><span class="line">    <span class="string">"#...#......#.##...#......#.##...#......#.##------------------#\n"</span></span><br><span class="line">    <span class="string">"###########################################------------------#\n"</span></span><br><span class="line">    <span class="string">"#..#....#....##..#....#....##..#....#....#####################\n"</span></span><br><span class="line">    <span class="string">"##########################################    #----------#\n"</span></span><br><span class="line">    <span class="string">"#.....#......##.....#......##.....#......#    #----------#\n"</span></span><br><span class="line">    <span class="string">"##########################################    #----------#\n"</span></span><br><span class="line">    <span class="string">"#.#..#....#..##.#..#....#..##.#..#....#..#    #----------#\n"</span></span><br><span class="line">    <span class="string">"##########################################    ############\n"</span></span><br><span class="line">    );<span class="comment">//输出样例</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <h1 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/P1001/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -900,7 +940,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-19 23:10:40" itemprop="dateModified" datetime="2020-07-19T23:10:40+08:00">2020-07-19</time>
+                <time title="Modified: 2020-07-26 13:50:50" itemprop="dateModified" datetime="2020-07-26T13:50:50+08:00">2020-07-26</time>
               </span>
 
           
@@ -914,23 +954,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h1 id="卡特兰数经典例题"><a href="#卡特兰数经典例题" class="headerlink" title="卡特兰数经典例题"></a>卡特兰数经典例题</h1><h3 id="原题链接：栈"><a href="#原题链接：栈" class="headerlink" title="原题链接：栈"></a>原题链接：<a href="https://www.luogu.org/problem/P1044" target="_blank" rel="noopener">栈</a></h3><h3 id="解决方法：-Catalan-Number"><a href="#解决方法：-Catalan-Number" class="headerlink" title="解决方法： Catalan Number"></a>解决方法： <em><strong>Catalan Number</strong></em></h3><p>为何是卡特兰数？解释原理：</p>
+          <h1 id="卡特兰数经典例题"><a href="#卡特兰数经典例题" class="headerlink" title="卡特兰数经典例题"></a>卡特兰数经典例题</h1><h3 id="原题链接：栈"><a href="#原题链接：栈" class="headerlink" title="原题链接：栈"></a>原题链接：<a href="https://www.luogu.org/problem/P1044" target="_blank" rel="noopener">栈</a></h3><h3 id="解决方法：-Catalan-Number"><a href="#解决方法：-Catalan-Number" class="headerlink" title="解决方法： Catalan Number"></a>解决方法： <em><strong>Catalan Number</strong></em></h3><p>为何是卡特兰数？解释原理：</p>
 <p>x为最后一个出栈的，可以将原来的栈分为两部分</p>
-<ul>
-<li><p>小于x(x-1个)</p>
-</li>
-<li><p>大于x(n-x个)</p>
-</li>
-</ul>
-<p>排列后可得x的取值为catalan[x]=catalan[x-1]*catalan[n-x]</p>
-<p>直接动归 可得 ans=catalan[0]<em>catalan[n-1]+catalan[1]catalan[n-2]+…+catalan[n-1]</em>catalan[0]</p>
-<p>上述语句即为卡特兰数的公式</p>
-<p>参见<a href="https://baike.baidu.com/item/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/6125746?fr=aladdin" target="_blank" rel="noopener">百度百科</a><br><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=1cfe77909d0a304e462fa8a8b0a1cce3/4d086e061d950a7be3e94d5000d162d9f3d3c942.jpg" alt="卡特兰数_百度百科"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//P1044     Stack</span></span><br><span class="line"><span class="comment">//SOLUTION: Catalan Number</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,ans;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> catalan[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	catalan[<span class="number">0</span>]=<span class="number">1</span>;catalan[<span class="number">1</span>]=<span class="number">1</span>;catalan[<span class="number">2</span>]=<span class="number">2</span>;<span class="comment">//定义卡特兰数前几个数的值</span></span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n<span class="number">-1</span>;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			catalan[i]+=catalan[j]*catalan[i-j<span class="number">-1</span>];<span class="comment">//计算需要的卡特兰数</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;catalan[n];<span class="comment">//输出答案</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>本片题解基于 @inexistent改编</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/P1044/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1027,6 +1060,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

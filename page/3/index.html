@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一个技术宅的小窝">
@@ -114,15 +114,47 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
           
@@ -169,10 +201,17 @@
       </div>
   </nav>
 </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
       </section>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -181,10 +220,6 @@
       </header>
 
       
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -380,7 +415,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-19 23:10:44" itemprop="dateModified" datetime="2020-07-19T23:10:44+08:00">2020-07-19</time>
+                <time title="Modified: 2020-07-26 13:50:56" itemprop="dateModified" datetime="2020-07-26T13:50:56+08:00">2020-07-26</time>
               </span>
 
           
@@ -394,24 +429,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<p>此题<strong>最简单</strong>的方法，其实前面已经有大佬<a href="https://www.luogu.org/user/69196" target="_blank" rel="noopener">@SocietyNiu</a>讲过了，就是用<strong>Python</strong>做一个简单的打表</p>
+          <p>此题<strong>最简单</strong>的方法，其实前面已经有大佬<a href="https://www.luogu.org/user/69196" target="_blank" rel="noopener">@SocietyNiu</a>讲过了，就是用<strong>Python</strong>做一个简单的打表</p>
 <p>步骤</p>
 <ol>
 <li>先输入打表后的数据</li>
 <li>输入数据</li>
 <li>输出表中的答案</li>
 </ol>
-<p>贴上代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> a[<span class="number">60</span>]=&#123;<span class="string">"0"</span>,<span class="string">"1"</span>,<span class="string">"3"</span>,<span class="string">"9"</span>,<span class="string">"33"</span>,<span class="string">"153"</span>,<span class="string">"873"</span>,<span class="string">"5913"</span>,<span class="string">"46233"</span>,<span class="string">"409113"</span>,<span class="string">"4037913"</span>,<span class="string">"43954713"</span>,<span class="string">"522956313"</span>,<span class="string">"6749977113"</span>,<span class="string">"93928268313"</span>,<span class="string">"1401602636313"</span>,<span class="string">"22324392524313"</span>,<span class="string">"378011820620313"</span>,<span class="string">"6780385526348313"</span>,<span class="string">"128425485935180313"</span>,<span class="string">"2561327494111820313"</span>,<span class="string">"53652269665821260313"</span>,<span class="string">"1177652997443428940313"</span>,<span class="string">"27029669736328405580313"</span>,<span class="string">"647478071469567844940313"</span>,<span class="string">"16158688114800553828940313"</span>,<span class="string">"419450149241406189412940313"</span>,<span class="string">"11308319599659758350180940313"</span>,<span class="string">"316196664211373618851684940313"</span>,<span class="string">"9157958657951075573395300940313"</span>,<span class="string">"274410818470142134209703780940313"</span>,<span class="string">"8497249472648064951935266660940313"</span>,<span class="string">"271628086406341595119153278820940313"</span>,<span class="string">"8954945705218228090637347680100940313"</span>,<span class="string">"304187744744822368938255957323620940313"</span>,<span class="string">"10637335711130967298604907294846820940313"</span>,<span class="string">"382630662501032184766604355445682020940313"</span>,<span class="string">"14146383753727377231082583937026584420940313"</span>,<span class="string">"537169001220328488991089808037100875620940313"</span>,<span class="string">"20935051082417771847631371547939998232420940313"</span>,<span class="string">"836850334330315506193242641144055892504420940313"</span>,<span class="string">"34289376947494122614363304694584807557656420940313"</span>,<span class="string">"1439295494700374021157505910939096377494040420940313"</span>,<span class="string">"61854558558074209658512637979453093884758552420940313"</span>,<span class="string">"2720126133346522977702138448994068984204397080420940313"</span>,<span class="string">"122342346998826717539665299944651784048588130840420940313"</span>,<span class="string">"5624964506810915667389970728744906677010239883800420940313"</span>,<span class="string">"264248206017979096310354325882356886646207872272920420940313"</span>,<span class="string">"12678163798554051767172643373255731925167694226950680420940313"</span>,<span class="string">"620960027832821612639424806694551108812720525606160920420940313"</span>,<span class="string">"31035053229546199656252032972759319953190362094566672920420940313"</span>&#125;;<span class="comment">//此处为超水打表</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      <span class="keyword">int</span> n;</span><br><span class="line">      <span class="built_in">cin</span>&gt;&gt;n;<span class="comment">//读入他想让你计算的和</span></span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;a[n];<span class="comment">//输出答案</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>下面附上<strong>Python</strong>打表源码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ans=<span class="number">1</span></span><br><span class="line">k=<span class="number">2</span></span><br><span class="line">last=<span class="number">1</span></span><br><span class="line">n=int(input())</span><br><span class="line"><span class="keyword">while</span> k&lt;=n:</span><br><span class="line">    last*=i</span><br><span class="line">    sum+=last</span><br><span class="line">    k+=<span class="number">1</span></span><br><span class="line">    f.write(<span class="string">'"'</span>)</span><br><span class="line">    f.write(str(ans))</span><br><span class="line">    f.write(<span class="string">'",'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>配上AC链接<a href="https://www.luogu.org/record/24483665" target="_blank" rel="noopener">yuzh0816 的 AC记录</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/02/P1009/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -718,6 +750,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
