@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -28,7 +28,7 @@
 <meta property="og:url" content="http://blog.hexoian.cn/2020/01/02/Bisection_Subset/index.html">
 <meta property="og:site_name" content="yuzh的博客">
 <meta property="og:description" content="参考博客对于从1到N的连续整集合，划分为两个子集合，且保证每个集合的数字和是相等的。因而，划分之后每个子集全的数字应该为n(n+1)&#x2F;2的一半，即n(n+1)&#x2F;4由于两个子集中都是整数，所以n(n+1)必为偶数，则可以设s&#x3D;n(n+1),并判断s%4 .则，s&#x2F;&#x3D;4是划分之后子集合的数字和；dyn[i]数组表示任意个数加起来等于i的组数。">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://5.135.58.179:7009/pictures/pro_pics/p40/1.PNG">
 <meta property="article:published_time" content="2020-01-02T13:12:52.000Z">
 <meta property="article:modified_time" content="2020-07-19T15:13:35.604Z">
@@ -46,7 +46,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'en'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -103,7 +103,10 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
@@ -125,6 +128,30 @@
 
 
 
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
 
 
 
@@ -143,10 +170,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -158,20 +185,23 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yuzh"
+      src="https://i.loli.net/2020/02/25/yhFDpw2dqV4b3Gt.png">
   <p class="site-author-name" itemprop="name">yuzh</p>
   <div class="site-description" itemprop="description">一个技术宅的小窝</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -209,11 +239,11 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/2020/01/02/Bisection_Subset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://i.loli.net/2020/02/25/yhFDpw2dqV4b3Gt.png">
       <meta itemprop="name" content="yuzh">
       <meta itemprop="description" content="一个技术宅的小窝">
     </span>
@@ -231,16 +261,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2020-01-02 21:12:52" itemprop="dateCreated datePublished" datetime="2020-01-02T21:12:52+08:00">2020-01-02</time>
+              <time title="创建时间：2020-01-02 21:12:52" itemprop="dateCreated datePublished" datetime="2020-01-02T21:12:52+08:00">2020-01-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-19 23:13:35" itemprop="dateModified" datetime="2020-07-19T23:13:35+08:00">2020-07-19</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-19 23:13:35" itemprop="dateModified" datetime="2020-07-19T23:13:35+08:00">2020-07-19</time>
               </span>
 
           
@@ -271,14 +301,14 @@
 <div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>yuzh
+    <strong>本文作者： </strong>yuzh
   </li>
   <li class="post-copyright-link">
-    <strong>Post link: </strong>
+    <strong>本文链接：</strong>
     <a href="http://blog.hexoian.cn/2020/01/02/Bisection_Subset/" title="平分子集">http://blog.hexoian.cn/2020/01/02/Bisection_Subset/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-cn" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
