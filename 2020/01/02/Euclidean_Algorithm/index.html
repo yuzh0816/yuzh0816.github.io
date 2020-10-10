@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 4.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
@@ -191,7 +191,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是辗转相除法"><span class="nav-number">1.</span> <span class="nav-text">什么是辗转相除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#辗转相除法递归式"><span class="nav-number">2.</span> <span class="nav-text">辗转相除法递归式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#证明"><span class="nav-number">3.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text"></span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是辗转相除法"><span class="nav-number">1.</span> <span class="nav-text">什么是辗转相除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#辗转相除法递归式"><span class="nav-number">2.</span> <span class="nav-text">辗转相除法递归式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#证明"><span class="nav-number">3.</span> <span class="nav-text">证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text"></span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -494,5 +494,10 @@ NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
 });
 </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1602371458788')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 </html>
