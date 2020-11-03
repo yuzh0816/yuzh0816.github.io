@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.hexoian.cn/"/>
-  <updated>2020-11-03T14:21:46.837Z</updated>
+  <updated>2020-11-03T14:28:06.392Z</updated>
   <id>http://blog.hexoian.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.hexoian.cn/2020/11/03/c++_queue/"/>
     <id>http://blog.hexoian.cn/2020/11/03/c++_queue/</id>
     <published>2020-11-03T14:02:53.000Z</published>
-    <updated>2020-11-03T14:21:46.837Z</updated>
+    <updated>2020-11-03T14:28:06.392Z</updated>
     
     <content type="html"><![CDATA[<p><img src="1.jpg" alt="Queue"></p><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ol><li><p>入队(push):在队列末尾加入一个元素，例如:q.push(x)</p></li><li><p>出队(pop):删除/弹出队列第一个元素，即队首元素，例如:q.pop()</p></li><li><p>访问队首元素(front):返回队列第一个元素，例如:q.front()</p></li><li><p>访问队尾元素(back):返回队列最后一个元素，即队尾元素，例如:q.back()</p></li><li><p>判断队列空(empty):判断队列是否为空，如果空，则返回true，否则返回false，例如:q.empty()</p></li><li><p>访问队列中元素的个数(size):返回队列元素个数，例如:q.size()</p></li></ol><hr><p>参考资料：</p><ol><li><a href="https://blog.csdn.net/qq_41822647/article/details/83718730" target="_blank" rel="noopener">ガッシュ·ベル</a></li></ol>]]></content>
     
