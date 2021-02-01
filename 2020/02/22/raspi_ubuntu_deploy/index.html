@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><link rel=manifest href=/manifest.json>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.1.1">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
   </script>
 
   <meta name="description" content="前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。   所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线">
@@ -102,7 +102,7 @@
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
-    <a href="https://github.com/yuzh0816" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/yuzh0816" class="github-corner" aria-label="View source on GitHub">
       <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z">
         </path>
@@ -196,7 +196,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载Ubuntu并完成烧录"><span class="nav-number">1.</span> <span class="nav-text">下载Ubuntu并完成烧录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载Ubuntu"><span class="nav-number">1.1.</span> <span class="nav-text">下载Ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#烧录Ubuntu"><span class="nav-number">1.2.</span> <span class="nav-text">烧录Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载balelnaEtcher"><span class="nav-number">1.2.1.</span> <span class="nav-text">下载balelnaEtcher</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#烧录镜像文件"><span class="nav-number">1.2.2.</span> <span class="nav-text">烧录镜像文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖原有驱动"><span class="nav-number">2.</span> <span class="nav-text">覆盖原有驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开机并远程ssh"><span class="nav-number">3.</span> <span class="nav-text">开机并远程ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换更新源"><span class="nav-number">4.</span> <span class="nav-text">更换更新源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点赞，收藏，评论！！"><span class="nav-number">5.</span> <span class="nav-text">点赞，收藏，评论！！</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDUbuntu%E5%B9%B6%E5%AE%8C%E6%88%90%E7%83%A7%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">下载Ubuntu并完成烧录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDUbuntu"><span class="nav-number">1.1.</span> <span class="nav-text">下载Ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%A7%E5%BD%95Ubuntu"><span class="nav-number">1.2.</span> <span class="nav-text">烧录Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDbalelnaEtcher"><span class="nav-number">1.2.1.</span> <span class="nav-text">下载balelnaEtcher</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%A7%E5%BD%95%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">烧录镜像文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%86%E7%9B%96%E5%8E%9F%E6%9C%89%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">覆盖原有驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E5%B9%B6%E8%BF%9C%E7%A8%8Bssh"><span class="nav-number">3.</span> <span class="nav-text">开机并远程ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E6%9B%B4%E6%96%B0%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">更换更新源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E8%B5%9E%EF%BC%8C%E6%94%B6%E8%97%8F%EF%BC%8C%E8%AF%84%E8%AE%BA%EF%BC%81%EF%BC%81"><span class="nav-number">5.</span> <span class="nav-text">点赞，收藏，评论！！</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -309,9 +309,9 @@
 </blockquote>
 <a id="more"></a>
 
-<h2 id="下载Ubuntu并完成烧录"><a href="#下载Ubuntu并完成烧录" class="headerlink" title="下载Ubuntu并完成烧录"></a>下载Ubuntu并完成烧录</h2><h3 id="下载Ubuntu"><a href="#下载Ubuntu" class="headerlink" title="下载Ubuntu"></a>下载Ubuntu</h3><p>前往<a href="https://wiki.ubuntu.com/ARM/RaspberryPi" target="_blank" rel="noopener">Ubuntu Wiki</a>，下载ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz</p>
+<h2 id="下载Ubuntu并完成烧录"><a href="#下载Ubuntu并完成烧录" class="headerlink" title="下载Ubuntu并完成烧录"></a>下载Ubuntu并完成烧录</h2><h3 id="下载Ubuntu"><a href="#下载Ubuntu" class="headerlink" title="下载Ubuntu"></a>下载Ubuntu</h3><p>前往<a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/ARM/RaspberryPi">Ubuntu Wiki</a>，下载ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz</p>
 <p><img src="https://i.loli.net/2020/02/22/U2osiMEFJ7DTeOv.png" alt=" ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz "></p>
-<h3 id="烧录Ubuntu"><a href="#烧录Ubuntu" class="headerlink" title="烧录Ubuntu"></a>烧录Ubuntu</h3><h4 id="下载balelnaEtcher"><a href="#下载balelnaEtcher" class="headerlink" title="下载balelnaEtcher"></a>下载balelnaEtcher</h4><p>前往<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher官网</a>下载，版本自选。</p>
+<h3 id="烧录Ubuntu"><a href="#烧录Ubuntu" class="headerlink" title="烧录Ubuntu"></a>烧录Ubuntu</h3><h4 id="下载balelnaEtcher"><a href="#下载balelnaEtcher" class="headerlink" title="下载balelnaEtcher"></a>下载balelnaEtcher</h4><p>前往<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">balenaEtcher官网</a>下载，版本自选。</p>
 <p><img src="https://i.loli.net/2020/02/22/pQs5agCUucVvljM.png" alt="balelnaEtcher"></p>
 <h4 id="烧录镜像文件"><a href="#烧录镜像文件" class="headerlink" title="烧录镜像文件"></a>烧录镜像文件</h4><p>注意备份！！烧录会格式化你的存储设备！！</p>
 <ol>
@@ -322,7 +322,7 @@
 <p><img src="https://i.loli.net/2020/02/22/EhB5u32tDrdbcSF.png" alt="flash"></p>
 <h2 id="覆盖原有驱动"><a href="#覆盖原有驱动" class="headerlink" title="覆盖原有驱动"></a>覆盖原有驱动</h2><ol>
 <li>将原有boot分区文件删除</li>
-<li>下载<a href="https://www.lanzous.com/i9kw4oj" target="_blank" rel="noopener">boot驱动包</a></li>
+<li>下载<a target="_blank" rel="noopener" href="https://www.lanzous.com/i9kw4oj">boot驱动包</a></li>
 <li>解压后把所有文件粘贴至boot分区</li>
 </ol>
 <p>完成！</p>
@@ -331,18 +331,14 @@
 <p><img src="https://i.loli.net/2020/02/22/C82FMv9WzxUodye.png" alt="Ubuntu IP"></p>
 <p>打开Powershell，输入</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ubuntu@你记录到的IP</span><br></pre></td></tr></table></figure>
-
 <p>初始密码为ubuntu，接下来按照提示操作。先输入一遍ubuntu，然后设置自己想要的密码。</p>
 <h2 id="更换更新源"><a href="#更换更新源" class="headerlink" title="更换更新源"></a>更换更新源</h2><p>编辑文件/etc/apt/sources.list</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-
 <p>输入内容</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 预发布软件源，不建议启用</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
-
 <p>Ctrl+O保存，然后Ctrl+X退出。</p>
 <p>更新软件及系统</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
-
 <p>恭喜，成功在树莓派4B上安装Ubuntu Server 18.04！</p>
 <h2 id="点赞，收藏，评论！！"><a href="#点赞，收藏，评论！！" class="headerlink" title="点赞，收藏，评论！！"></a>点赞，收藏，评论！！</h2>
     </div>
@@ -457,7 +453,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -527,10 +523,5 @@ NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
 });
 </script>
 
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1604466963273')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
+</body>
 </html>

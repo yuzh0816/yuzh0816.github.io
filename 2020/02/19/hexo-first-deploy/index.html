@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><link rel=manifest href=/manifest.json>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.1.1">
+<meta name="generator" content="Hexo 5.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/01/05/H9cTbrVfx6aGFE5.png">
@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml"};
   </script>
 
   <meta name="description" content="简易搭建Hexo静态博客">
@@ -101,7 +101,7 @@
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
-    <a href="https://github.com/yuzh0816" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/yuzh0816" class="github-corner" aria-label="View source on GitHub">
       <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z">
         </path>
@@ -195,7 +195,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从零开始-Hexo博客搭建"><span class="nav-number">1.</span> <span class="nav-text">从零开始 Hexo博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-篇"><span class="nav-number">1.1.1.</span> <span class="nav-text">Windows 篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装nodejs"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装git"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">安装git</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian-Linux篇"><span class="nav-number">1.1.2.</span> <span class="nav-text">Debian Linux篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装nodejs-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">安装nodejs</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo基本操作"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建"><span class="nav-number">1.3.1.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Front-matter"><span class="nav-number">1.3.2.</span> <span class="nav-text">Front-matter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后-点赞，收藏！！"><span class="nav-number">1.4.</span> <span class="nav-text">最后:点赞，收藏！！</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">从零开始 Hexo博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-%E7%AF%87"><span class="nav-number">1.1.1.</span> <span class="nav-text">Windows 篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85git"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">安装git</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian-Linux%E7%AF%87"><span class="nav-number">1.1.2.</span> <span class="nav-text">Debian Linux篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">安装nodejs</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA"><span class="nav-number">1.3.1.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Front-matter"><span class="nav-number">1.3.2.</span> <span class="nav-text">Front-matter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E-%E7%82%B9%E8%B5%9E%EF%BC%8C%E6%94%B6%E8%97%8F%EF%BC%81%EF%BC%81"><span class="nav-number">1.4.</span> <span class="nav-text">最后:点赞，收藏！！</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -307,55 +307,42 @@
 <a id="more"></a>
 
 <hr>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="Windows-篇"><a href="#Windows-篇" class="headerlink" title="Windows 篇"></a>Windows 篇</h3><h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>进入nodejs中文网下载<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs</a>，32位64位安装包自选</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="Windows-篇"><a href="#Windows-篇" class="headerlink" title="Windows 篇"></a>Windows 篇</h3><h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>进入nodejs中文网下载<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">nodejs</a>，32位64位安装包自选</p>
 <p><img src="https://i.loli.net/2020/03/04/fv8qg1F5XlE3RSY.png" alt="nodejs download"></p>
-<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>进入git官网下载<a href="https://git-scm.com/download/" target="_blank" rel="noopener">git</a>，直接下载Windows包</p>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>进入git官网下载<a target="_blank" rel="noopener" href="https://git-scm.com/download/">git</a>，直接下载Windows包</p>
 <p><img src="https://i.loli.net/2020/02/19/PIHqCmcSkxOs4vL.png" alt="git download"></p>
-<h3 id="Debian-Linux篇"><a href="#Debian-Linux篇" class="headerlink" title="Debian Linux篇"></a>Debian Linux篇</h3><h4 id="安装nodejs-1"><a href="#安装nodejs-1" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>同理，进入nodejs中文网下载<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">nodejs</a>,根据环境选择安装源码</p>
+<h3 id="Debian-Linux篇"><a href="#Debian-Linux篇" class="headerlink" title="Debian Linux篇"></a>Debian Linux篇</h3><h4 id="安装nodejs-1"><a href="#安装nodejs-1" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><p>同理，进入nodejs中文网下载<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">nodejs</a>,根据环境选择安装源码</p>
 <p><img src="https://i.loli.net/2020/02/19/8Qhwg5DTOEGtjSN.png" alt="nodejs download"></p>
 <p>我这里是树莓派4B，选择ARM v7，复制下载链接。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下载</span></span><br><span class="line">wget https://npm.taobao.org/mirrors/node/v12.16.0/node-v12.16.0-linux-armv7l.tar.xz</span><br></pre></td></tr></table></figure>
-
 <p>然后解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 解压并移动位置</span></span><br><span class="line">tar -xvf node-v12.16.0-linux-armv7l.tar.xz -C /usr/local/</span><br></pre></td></tr></table></figure>
-
 <p>进入目录并改名</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mv node-v5.10.1-linux-x64/ nodejs</span><br></pre></td></tr></table></figure>
-
 <p>创建硬链接</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/nodejs/bin/node /usr/local/bin</span><br><span class="line">ln -s /usr/local/nodejs/bin/npm /usr/local/bin</span><br></pre></td></tr></table></figure>
-
 <p>测试是否已安装</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>进入Terminal或者Powershell,使用npm下载Hexo</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>如果是Linux系统，请执行 ln -s /usr/local/nodejs/bin/npm /usr/local/bin 创建硬链接</p>
 </blockquote>
 <p>接下来，执行下列命令，创建Hexo源码包</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下列&lt;folder&gt;请自行改名</span></span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
 <h2 id="Hexo基本操作"><a href="#Hexo基本操作" class="headerlink" title="Hexo基本操作"></a>Hexo基本操作</h2><h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><ul>
-<li><p>运行Hexo(默认4000端口)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建文章(存放在source/_posts中，以Markdown作为写作语言)</p>
-</li>
+<li>运行Hexo(默认4000端口)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+<li>新建文章(存放在source/_posts中，以Markdown作为写作语言)</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下列&lt;title&gt;请自行改名</span></span><br><span class="line">hexo new &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>新建页码(存放在source中)</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下列&lt;title&gt;请自行改名</span></span><br><span class="line">hexo new page &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
 <h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><blockquote>
 <p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 举例</span></span><br><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2020/1/1 00:00:00</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
 <p>下图展示了如何设置Front-matter</p>
 <p><img src="https://i.loli.net/2020/02/19/iBEcsNvbnxTd5P4.png" alt="how to set front-matter"></p>
 <p>这就是Hexo的博客的入门搭建啦！恭喜成功搭建的小伙伴们！</p>
@@ -469,7 +456,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -539,10 +526,5 @@ NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
 });
 </script>
 
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1604466963273')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script></body>
+</body>
 </html>
