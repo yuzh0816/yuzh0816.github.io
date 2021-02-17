@@ -1,282 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>P2390 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="题面题目背景改编自USACO2007Nov铜组Exploration 题目描述贝西在一条道路上旅行，道路上有许多地标，贝西想要在日落之前访问尽可能多的路标。将道路视为一条数轴，贝西从原点出发，道路上有n(1&lt;&#x3D;n&lt;&#x3D;50000)个地标，每个地标有一个坐标x[i](-100,000 ≤ xi ≤ 100,000)且地标的坐标各不相同，t(1≤ T ≤1000000000)分钟之后将会日落">
-<meta property="og:type" content="article">
-<meta property="og:title" content="P2390">
-<meta property="og:url" content="http://example.com/2020/05/26/P2390/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题面题目背景改编自USACO2007Nov铜组Exploration 题目描述贝西在一条道路上旅行，道路上有许多地标，贝西想要在日落之前访问尽可能多的路标。将道路视为一条数轴，贝西从原点出发，道路上有n(1&lt;&#x3D;n&lt;&#x3D;50000)个地标，每个地标有一个坐标x[i](-100,000 ≤ xi ≤ 100,000)且地标的坐标各不相同，t(1≤ T ≤1000000000)分钟之后将会日落">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-26T15:30:00.000Z">
-<meta property="article:modified_time" content="2020-07-26T05:50:35.286Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="题解">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 5.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-P2390" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/05/26/P2390/" class="article-date">
-  <time class="dt-published" datetime="2020-05-26T15:30:00.000Z" itemprop="datePublished">2020-05-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      P2390
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>改编自USACO2007Nov铜组Exploration</p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>贝西在一条道路上旅行，道路上有许多地标，贝西想要在日落之前访问尽可能多的路标。将道路视为一条数轴，贝西从原点出发，道路上有n(1&lt;=n&lt;=50000)个地标，每个地标有一个坐标x[i](-100,000 ≤ xi ≤ 100,000)且地标的坐标各不相同，t(1≤ T ≤1000000000)分钟之后将会日落。</p>
-<a id="more"></a>
-
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行：两个整数t,n</p>
-<p>第二行至第n+1行：地标的坐标x[i]</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>一个整数，贝西能访问的最多的地标数</p>
-<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><figure class="highlight plain"><figcaption><span>#1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">25 14</span><br><span class="line">16</span><br><span class="line">8</span><br><span class="line">-7</span><br><span class="line">3</span><br><span class="line">10</span><br><span class="line">-15</span><br><span class="line">-17</span><br><span class="line">6</span><br><span class="line">-12</span><br><span class="line">14</span><br><span class="line">-13</span><br><span class="line">2</span><br><span class="line">9</span><br><span class="line">-5</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>#1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8</span><br></pre></td></tr></table></figure>
-<h2 id="说明-提示"><a href="#说明-提示" class="headerlink" title="说明/提示"></a>说明/提示</h2><p>贝西日落时不用回到原点。</p>
-<hr>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>代码部分参考@<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/130199">NiveusNix</a>的题解</p>
-<p>由题意，想要最快捷地走更多的路，就不能有重复的路，因此分下面四种情况</p>
-<ol>
-<li><p>从原点一直往右走</p>
-</li>
-<li><p>从原点一直往左走</p>
-</li>
-<li><p>从原点往左走一段再往右走</p>
-</li>
-<li><p>从原点往右走一段再往左走</p>
-</li>
-</ol>
-<p>首先，对输入数据进行排序。</p>
-<p>其次，分类讨论：</p>
-<p>第一种和第二种情况可以直接模拟过去</p>
-<p>第三种和第四种则稍微麻烦一点点，需要使用二分来缩减范围。</p>
-<ol>
-<li><p>设定二分中点</p>
-</li>
-<li><p>算出当前所需要的时间（左边所需要的时间*2 + 右边所需要的时间（另外一种情况结论相反））</p>
-</li>
-<li><p>判断范围，继续二分 or 结束二分得出结果</p>
-</li>
-</ol>
-<p>代码如下，含有注释。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> t,n,s,L[<span class="number">50010</span>],R[<span class="number">50010</span>];<span class="comment">//L[]存在原点左边的地标离原点的距离，R[]存在原点右边的地标离原点的距离</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;n;</span><br><span class="line">    <span class="keyword">int</span> ll=<span class="number">0</span>,lr=<span class="number">0</span>,sum=<span class="number">0</span>;<span class="comment">//ll是左边最远地标离原点的距离，lr是右边最远地标离原点的距离</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//分类（原点左右）</span></span><br><span class="line">	&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">        <span class="keyword">if</span>(s==<span class="number">0</span>)</span><br><span class="line">		</span><br><span class="line">		&#123;</span><br><span class="line">        	sum=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(s&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lr++;</span><br><span class="line">            R[lr]=s;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			ll++;</span><br><span class="line">            L[ll]=-s;           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(L+<span class="number">1</span>,L+ll+<span class="number">1</span>);</span><br><span class="line">    sort(R+<span class="number">1</span>,R+lr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> t3=<span class="number">0</span>,t4=<span class="number">0</span>,mt1=<span class="number">0</span>,mt2=<span class="number">0</span>,mt3=<span class="number">0</span>,mt4=<span class="number">0</span>;<span class="comment">//t3是第3种情况的子任务解，t4是第4种情况的子任务解，mt1-4是每种情况的最优解</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ll;i++)&#123;<span class="comment">//直接往右走</span></span><br><span class="line">        <span class="keyword">if</span>(L[i]&lt;=t)&#123;</span><br><span class="line">            mt1+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=lr;i++)&#123;<span class="comment">//直接往左走</span></span><br><span class="line">        <span class="keyword">if</span>(R[i]&lt;=t)&#123;</span><br><span class="line">            mt2+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> le,ri,mid;<span class="comment">//临时左右分段，和二分中点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ll;i++)&#123;<span class="comment">//先枚举左边，回头向右走的坐标</span></span><br><span class="line">        le=<span class="number">1</span>;</span><br><span class="line">        ri=lr;</span><br><span class="line">        <span class="keyword">while</span>(ri&gt;=le)&#123;<span class="comment">//二分查找向右到达的坐标</span></span><br><span class="line">            mid=(ri+le)/<span class="number">2</span>;</span><br><span class="line">            t3=L[i]*<span class="number">2</span>+R[mid];<span class="comment">//算出当前所需要的时间</span></span><br><span class="line">    		<span class="keyword">if</span>(t3&gt;t)&#123;</span><br><span class="line">                ri=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                le=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        mt3=max(mt3,i+ri);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=lr;i++)&#123;<span class="comment">//先枚举右边，回头向左走的坐标</span></span><br><span class="line">        le=<span class="number">1</span>;</span><br><span class="line">        ri=ll;</span><br><span class="line">        <span class="keyword">while</span>(ri&gt;=le)&#123;<span class="comment">//二分查找向左到达的坐标</span></span><br><span class="line">            mid=(ri+le)/<span class="number">2</span>;</span><br><span class="line">            t4=R[i]*<span class="number">2</span>+L[mid];<span class="comment">//算出当前所需要的时间</span></span><br><span class="line">            <span class="keyword">if</span>(t4&gt;t)&#123;</span><br><span class="line">                ri=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                le=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        mt4=max(mt4,i+ri);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;max(max(mt1,mt2),max(mt3,mt4));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/05/26/P2390/" data-id="ckl92uaii000jnov63ie83r7d" data-title="P2390" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/05/31/topological-sort/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          拓扑排序
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/05/10/rpi_nextcloud_deploy/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">教你用树莓派来搭建一个NAS数据中心</div>
-    </a>
-  
-</nav>
-
-  
-</article>
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B2%E8%B4%A7/" rel="tag">干货</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag">树莓派</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E6%99%AE/" rel="tag">科普</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E5%88%92%E8%A1%A8/" rel="tag">计划表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a></li></ul>
+{% block page_class %}page-post-detail{% endblock %}
+
+
+{% block content %}
+
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
+
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E5%B9%B2%E8%B4%A7/" style="font-size: 17.5px;">干货</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 12.5px;">树莓派</a> <a href="/tags/%E7%A7%91%E6%99%AE/" style="font-size: 15px;">科普</a> <a href="/tags/%E8%AE%A1%E5%88%92%E8%A1%A8/" style="font-size: 10px;">计划表</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 10px;">软件</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/02/17/paragon_extfs/">辗转相除法</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/04/NexT_hello_world/">NexT! Hello World.</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/04/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/03/c++_queue/">STL库 QUEUE入门</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/06/SP18666/">SP18666 UVA1 - Radiation</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
