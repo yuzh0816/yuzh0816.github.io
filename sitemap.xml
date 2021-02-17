@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/02/17/paragon_extfs/</loc>
+    
+    <lastmod>2021-02-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2020/04/01/xenforo_deploy/</loc>
     
     <lastmod>2021-02-17</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://example.com/2020/05/10/rpi_nextcloud_deploy/</loc>
-    
-    <lastmod>2021-02-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/02/17/paragon_extfs/</loc>
     
     <lastmod>2021-02-17</lastmod>
     

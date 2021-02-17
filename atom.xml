@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-17T06:41:13.778Z</updated>
+  <updated>2021-02-17T15:10:42.607Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>辗转相除法</title>
+    <title>安装Paragon ExtFS</title>
     <link href="http://example.com/2021/02/17/paragon_extfs/"/>
     <id>http://example.com/2021/02/17/paragon_extfs/</id>
     <published>2021-02-17T06:41:13.000Z</published>
-    <updated>2021-02-17T06:41:13.778Z</updated>
+    <updated>2021-02-17T15:10:42.607Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>把keygen和另外两个文件放到ExtFS的安装目录下</p><p>打开keygen，先点击Patch RSA 2048，选择安装目录下的Paragon ExtFS for Windows.exe</p><p>再次点击 Patch RSA 2048，选择安装目录下的extservice.exe</p><p>点击Generate让生成注册码，keygen会自动破解并重启ExtFS的服务。</p><h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a href="https://china.paragon-software.com/home-windows/extfs-for-windows/download.html">点此进入官网下载主程序</a></p><p><a href="https://yuzh.lanzoui.com/iPjQ5lkjx9c">点此下载Patch</a></p>]]></content>
     
