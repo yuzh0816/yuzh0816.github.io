@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>yuzh的博客</title>
   
-  
+  <subtitle>Talk is Cheap, Show Me the Code.</subtitle>
   <link href="http://blog.hexoian.cn/atom.xml" rel="self"/>
   
   <link href="http://blog.hexoian.cn/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>安装Paragon ExtFS</title>
-    <link href="http://blog.hexoian.cn/paragon_extfs/"/>
-    <id>http://blog.hexoian.cn/paragon_extfs/</id>
+    <link href="http://blog.hexoian.cn/posts/paragon_extfs/"/>
+    <id>http://blog.hexoian.cn/posts/paragon_extfs/</id>
     <published>2021-02-17T06:41:13.000Z</published>
     <updated>2021-02-17T15:10:42.607Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>NexT! Hello World.</title>
-    <link href="http://blog.hexoian.cn/NexT_hello_world/"/>
-    <id>http://blog.hexoian.cn/NexT_hello_world/</id>
+    <link href="http://blog.hexoian.cn/posts/NexT_hello_world/"/>
+    <id>http://blog.hexoian.cn/posts/NexT_hello_world/</id>
     <published>2021-02-04T15:22:32.809Z</published>
     <updated>2020-07-19T15:07:50.690Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://blog.hexoian.cn/hello-world/"/>
-    <id>http://blog.hexoian.cn/hello-world/</id>
+    <link href="http://blog.hexoian.cn/posts/hello-world/"/>
+    <id>http://blog.hexoian.cn/posts/hello-world/</id>
     <published>2021-02-04T15:00:03.549Z</published>
     <updated>2021-02-04T15:00:03.549Z</updated>
     
@@ -78,8 +78,8 @@
   
   <entry>
     <title>STL库 QUEUE入门</title>
-    <link href="http://blog.hexoian.cn/c++_queue/"/>
-    <id>http://blog.hexoian.cn/c++_queue/</id>
+    <link href="http://blog.hexoian.cn/posts/c++_queue/"/>
+    <id>http://blog.hexoian.cn/posts/c++_queue/</id>
     <published>2020-11-03T14:02:53.000Z</published>
     <updated>2020-11-04T05:11:24.422Z</updated>
     
@@ -101,8 +101,8 @@
   
   <entry>
     <title>SP18666 UVA1 - Radiation</title>
-    <link href="http://blog.hexoian.cn/SP18666/"/>
-    <id>http://blog.hexoian.cn/SP18666/</id>
+    <link href="http://blog.hexoian.cn/posts/SP18666/"/>
+    <id>http://blog.hexoian.cn/posts/SP18666/</id>
     <published>2020-10-06T15:21:14.000Z</published>
     <updated>2020-10-10T23:31:18.765Z</updated>
     
@@ -121,8 +121,8 @@
   
   <entry>
     <title>Mark</title>
-    <link href="http://blog.hexoian.cn/mark/"/>
-    <id>http://blog.hexoian.cn/mark/</id>
+    <link href="http://blog.hexoian.cn/posts/mark/"/>
+    <id>http://blog.hexoian.cn/posts/mark/</id>
     <published>2020-07-14T13:20:39.000Z</published>
     <updated>2020-07-19T15:10:52.876Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>P5076 【深基16.例7】普通二叉树（简化版）</title>
-    <link href="http://blog.hexoian.cn/P5076/"/>
-    <id>http://blog.hexoian.cn/P5076/</id>
+    <link href="http://blog.hexoian.cn/posts/P5076/"/>
+    <id>http://blog.hexoian.cn/posts/P5076/</id>
     <published>2020-07-10T13:21:14.000Z</published>
     <updated>2020-07-26T05:45:08.776Z</updated>
     
@@ -168,8 +168,8 @@
   
   <entry>
     <title>P5318 【深基18.例3】查找文献</title>
-    <link href="http://blog.hexoian.cn/P5318/"/>
-    <id>http://blog.hexoian.cn/P5318/</id>
+    <link href="http://blog.hexoian.cn/posts/P5318/"/>
+    <id>http://blog.hexoian.cn/posts/P5318/</id>
     <published>2020-06-06T15:45:00.000Z</published>
     <updated>2020-11-03T14:07:30.022Z</updated>
     
@@ -188,8 +188,8 @@
   
   <entry>
     <title>P3916 图的遍历</title>
-    <link href="http://blog.hexoian.cn/P3916/"/>
-    <id>http://blog.hexoian.cn/P3916/</id>
+    <link href="http://blog.hexoian.cn/posts/P3916/"/>
+    <id>http://blog.hexoian.cn/posts/P3916/</id>
     <published>2020-06-03T15:30:00.000Z</published>
     <updated>2020-07-26T05:50:20.209Z</updated>
     
@@ -208,8 +208,8 @@
   
   <entry>
     <title>P1113 杂物</title>
-    <link href="http://blog.hexoian.cn/P1113/"/>
-    <id>http://blog.hexoian.cn/P1113/</id>
+    <link href="http://blog.hexoian.cn/posts/P1113/"/>
+    <id>http://blog.hexoian.cn/posts/P1113/</id>
     <published>2020-05-31T15:32:00.000Z</published>
     <updated>2020-07-26T05:50:43.061Z</updated>
     
@@ -228,8 +228,8 @@
   
   <entry>
     <title>拓扑排序</title>
-    <link href="http://blog.hexoian.cn/topological-sort/"/>
-    <id>http://blog.hexoian.cn/topological-sort/</id>
+    <link href="http://blog.hexoian.cn/posts/topological-sort/"/>
+    <id>http://blog.hexoian.cn/posts/topological-sort/</id>
     <published>2020-05-31T15:24:00.000Z</published>
     <updated>2020-07-19T15:09:15.925Z</updated>
     
@@ -248,8 +248,8 @@
   
   <entry>
     <title>P2390</title>
-    <link href="http://blog.hexoian.cn/P2390/"/>
-    <id>http://blog.hexoian.cn/P2390/</id>
+    <link href="http://blog.hexoian.cn/posts/P2390/"/>
+    <id>http://blog.hexoian.cn/posts/P2390/</id>
     <published>2020-05-26T15:30:00.000Z</published>
     <updated>2020-07-26T05:50:35.286Z</updated>
     
@@ -268,12 +268,12 @@
   
   <entry>
     <title>教你用树莓派来搭建一个NAS数据中心</title>
-    <link href="http://blog.hexoian.cn/rpi_nextcloud_deploy/"/>
-    <id>http://blog.hexoian.cn/rpi_nextcloud_deploy/</id>
+    <link href="http://blog.hexoian.cn/posts/rpi_nextcloud_deploy/"/>
+    <id>http://blog.hexoian.cn/posts/rpi_nextcloud_deploy/</id>
     <published>2020-05-10T13:00:00.000Z</published>
-    <updated>2021-02-17T06:47:11.624Z</updated>
+    <updated>2020-07-19T15:09:28.211Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1><a id="more"></a><p>本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本</p><h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><p>宝塔的安装此处不在赘述，<a href="bt.cn">教程在此</a></p><h3 id="安装php-7-2及以上版本，推荐7-3或7-4"><a href="#安装php-7-2及以上版本，推荐7-3或7-4" class="headerlink" title="安装php 7.2及以上版本，推荐7.3或7.4"></a>安装php 7.2及以上版本，推荐7.3或7.4</h3><p>php可在宝塔中安装，非常简单</p><h3 id="安装Nginx或者Apache"><a href="#安装Nginx或者Apache" class="headerlink" title="安装Nginx或者Apache"></a>安装Nginx或者Apache</h3><p>同样可在宝塔软件中心中安装，但是Apache和Nginx只能安装一个，不可同时安装。配置差的机器推荐使用Nginx。</p><h3 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h3><p>版本根据机器配置自行选择，同理不再赘述。</p><h2 id="下载并安装Nextcloud"><a href="#下载并安装Nextcloud" class="headerlink" title="下载并安装Nextcloud"></a>下载并安装Nextcloud</h2><h3 id="下载Nextcloud"><a href="#下载Nextcloud" class="headerlink" title="下载Nextcloud"></a>下载Nextcloud</h3><p>前往<a href="https://hexoian.cn/resources/16/">Hexoian论坛</a>，下载Nextcloud源码包。</p><p>ps:速度会比官网下快不少哦</p><h3 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h3><p>在宝塔的网站管理中新建网站，数据库也可不新建，但如果新建了，要记住账户密码。</p><p><img src="https://i.loli.net/2020/05/07/uqoQ2p51bP7gIMx.png" alt="1.png"></p><p>进入网站根目录，把下载的文件解压进去，像这样</p><p><img src="https://i.loli.net/2020/05/07/VlA2fCHTJjnKyoQ.png" alt="2.png"></p><p>打开你所设置的ip以及端口，然后会看到这个东西</p><p><img src="https://i.loli.net/2020/05/07/AnxljVFWT1ocCIE.png" alt="3.png"></p><p>设置好你自己的用户名和密码，不用安装哪些捆绑应用。NC默认使用SQLite如果想用Mysql数据库来存放的话，下面数据库那里展开，填写你数据库的信息。</p><p>等待一会儿，然后可能会出错，重载下数据库配置，再重启下数据库，然后重启php，重启Apache或者Nginx，可能还会炸，重新注册个账号就能进了（名字要和之前不一样）</p><p>一切就绪，会直接进入Nextcloud。</p><p><img src="https://i.loli.net/2020/05/07/hSP2FsmpwM4BDIl.png" alt="4.png"></p><p><img src="https://i.loli.net/2020/05/07/9uHyI76CVGkZPc4.png" alt="5.png"></p><h2 id="安装完成！"><a href="#安装完成！" class="headerlink" title="安装完成！"></a>安装完成！</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1><a id="more"></a><div class="note info">            <p>本文的NAS系统用的是Ubuntu 18.04 LTS + Nextcloud最新版本</p>          </div><h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><p>宝塔的安装此处不在赘述，<a href="bt.cn">教程在此</a></p><h3 id="安装php-7-2及以上版本，推荐7-3或7-4"><a href="#安装php-7-2及以上版本，推荐7-3或7-4" class="headerlink" title="安装php 7.2及以上版本，推荐7.3或7.4"></a>安装php 7.2及以上版本，推荐7.3或7.4</h3><p>php可在宝塔中安装，非常简单</p><h3 id="安装Nginx或者Apache"><a href="#安装Nginx或者Apache" class="headerlink" title="安装Nginx或者Apache"></a>安装Nginx或者Apache</h3><p>同样可在宝塔软件中心中安装，但是Apache和Nginx只能安装一个，不可同时安装。配置差的机器推荐使用Nginx。</p><h3 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h3><p>版本根据机器配置自行选择，同理不再赘述。</p><h2 id="下载并安装Nextcloud"><a href="#下载并安装Nextcloud" class="headerlink" title="下载并安装Nextcloud"></a>下载并安装Nextcloud</h2><h3 id="下载Nextcloud"><a href="#下载Nextcloud" class="headerlink" title="下载Nextcloud"></a>下载Nextcloud</h3><p>前往<a href="https://hexoian.cn/resources/16/">Hexoian论坛</a>，下载Nextcloud源码包。</p><p>ps:速度会比官网下快不少哦</p><h3 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h3><p>在宝塔的网站管理中新建网站，数据库也可不新建，但如果新建了，要记住账户密码。</p><p><img src="https://i.loli.net/2020/05/07/uqoQ2p51bP7gIMx.png" alt="1.png"></p><p>进入网站根目录，把下载的文件解压进去，像这样</p><p><img src="https://i.loli.net/2020/05/07/VlA2fCHTJjnKyoQ.png" alt="2.png"></p><p>打开你所设置的ip以及端口，然后会看到这个东西</p><p><img src="https://i.loli.net/2020/05/07/AnxljVFWT1ocCIE.png" alt="3.png"></p><p>设置好你自己的用户名和密码，不用安装哪些捆绑应用。NC默认使用SQLite如果想用Mysql数据库来存放的话，下面数据库那里展开，填写你数据库的信息。</p><p>等待一会儿，然后可能会出错，重载下数据库配置，再重启下数据库，然后重启php，重启Apache或者Nginx，可能还会炸，重新注册个账号就能进了（名字要和之前不一样）</p><p>一切就绪，会直接进入Nextcloud。</p><p><img src="https://i.loli.net/2020/05/07/hSP2FsmpwM4BDIl.png" alt="4.png"></p><p><img src="https://i.loli.net/2020/05/07/9uHyI76CVGkZPc4.png" alt="5.png"></p><h2 id="安装完成！"><a href="#安装完成！" class="headerlink" title="安装完成！"></a>安装完成！</h2>]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;教你用树莓派来搭建一个NAS数据中心&quot;&gt;&lt;a href=&quot;#教你用树莓派来搭建一个NAS数据中心&quot; class=&quot;headerlink&quot; title=&quot;教你用树莓派来搭建一个NAS数据中心&quot;&gt;&lt;/a&gt;教你用树莓派来搭建一个NAS数据中心&lt;/h1&gt;</summary>
@@ -287,12 +287,12 @@
   
   <entry>
     <title>教你搭建一个专业的论坛系统---Xenforo</title>
-    <link href="http://blog.hexoian.cn/xenforo_deploy/"/>
-    <id>http://blog.hexoian.cn/xenforo_deploy/</id>
+    <link href="http://blog.hexoian.cn/posts/xenforo_deploy/"/>
+    <id>http://blog.hexoian.cn/posts/xenforo_deploy/</id>
     <published>2020-04-01T08:00:00.000Z</published>
-    <updated>2021-02-17T06:48:40.991Z</updated>
+    <updated>2020-07-26T05:51:13.856Z</updated>
     
-    <content type="html"><![CDATA[<p>本文资源包<a href="https://www.lanzous.com/iastpmj">点此下载</a>，密码为<strong>yuzh</strong></p><h1 id="教你搭建一个专业的论坛系统—Xenforo"><a href="#教你搭建一个专业的论坛系统—Xenforo" class="headerlink" title="教你搭建一个专业的论坛系统—Xenforo"></a>教你搭建一个专业的论坛系统—Xenforo</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装宝塔Linux面板"><a href="#安装宝塔Linux面板" class="headerlink" title="安装宝塔Linux面板"></a>安装宝塔Linux面板</h3><p>进入<a href="https://bt.cn/">宝塔官网</a>，参考官网文档下载安装。</p><p>根据需要选择运行库！</p><a id="more"></a><p>MySql至少需为5.7，php至少需为7.3！！</p><p>如下图所示</p><p><img src="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png" alt="运行库"></p><p><img src="" alt="安装环境"></p><p>经过漫长的等待，等待安装完成</p><hr><h2 id="下载论坛资源包"><a href="#下载论坛资源包" class="headerlink" title="下载论坛资源包"></a>下载论坛资源包</h2><p>接下来，下载我打包的Xenforo包（有钱人请<a href="https://xenforo.com/">支持正版！！</a>），并放到你服务器上。</p><hr><h2 id="在宝塔内添加动态网站"><a href="#在宝塔内添加动态网站" class="headerlink" title="在宝塔内添加动态网站"></a>在宝塔内添加动态网站</h2><p>如下图所示，自行配置，要记住mysql的账号和密码（不记住也可，可以自己去找）</p><p><img src="https://i.loli.net/2020/04/02/HvfBCKjxsMOmklV.png" alt="新建网站"></p><p>端口一定要记住！！</p><hr><h2 id="导入网站资源包"><a href="#导入网站资源包" class="headerlink" title="导入网站资源包"></a>导入网站资源包</h2><p>将xenforo_2.1.8_Patch_1文件夹中的upload文件夹中的内容上传至网站的根目录（其实剪切过去更快），然后把upload文件夹中的内容剪切到根目录，结果如下图所示</p><p><img src="https://i.loli.net/2020/04/02/hzOu291DJTIjcHw.png" alt="install"></p><p>然后打开网站&lt;服务器IP&gt;:&lt;你之前设置的端口&gt;</p><p>打开后可能会有下面的提示，可以在宝塔中更改php的配置—禁用函数</p><p><img src="https://i.loli.net/2020/04/02/pm2l4TPy67DBbtM.png" alt="warning"></p><p>找到exec，proc_open，popen这三项，删掉，重启php服务。</p><p><img src="https://i.loli.net/2020/04/02/DI8whbylKMUjqin.png" alt="delete"></p><p>重新进入网站，成功！</p><p><img src="https://i.loli.net/2020/04/02/zJEtg2hAK8sFrc1.png" alt="success!!"></p><p>点击next，输入mysql的账户和密码</p><p><img src="https://i.loli.net/2020/04/02/i8fsg32MNT6nBoL.png" alt="账号密码"></p><p>点击Save config，然后Contiune，Begin Installation</p><p><img src="https://i.loli.net/2020/04/02/CPbo8nOlDKYVj1m.png" alt="processing..."></p><p>等待1-5分钟，输入管理员用户信息（自己设置），下一步Send anonymous server statistics 不用选，没有用。</p><p>最后，提示进入管理系统，自行登录。</p><p>Xenforo安装成功</p><hr><h2 id="为Xenforo配置中文语言包"><a href="#为Xenforo配置中文语言包" class="headerlink" title="为Xenforo配置中文语言包"></a>为Xenforo配置中文语言包</h2><p>首先，进入论坛管理系统。</p><p>进入Appearance-Languages</p><p><img src="https://i.loli.net/2020/04/02/Vi5lhdprxtzuj2e.png" alt="language"></p><p>点击“浏览”，上传资源包中的XenforoChinesePACK.xml，然后单击“Import”。结束后，选择“简体中文”。</p><p><img src="https://i.loli.net/2020/04/02/3mrionYKcxjTJNC.png" alt="import"></p><p>中文语言包安装成功</p><hr><p>然后，进入设置-选项-用户注册选项-为游客开启CAPTCHA，选择“使用问题 &amp; 回答 CAPTCHA”，然后单击“使用明确的问题”</p><p><img src="https://i.loli.net/2020/04/02/p7lJDdTUSyFNnfQ.png" alt="CAPTCHA"></p><p>设置好你自己的问题和答案，如下图所示。</p><p><img src="https://i.loli.net/2020/04/02/Q9xHYyRk5BM8I7s.png" alt="Q&amp;A"></p><p>最后，进入设置-选项-邮件系统选项，设置好你自己的邮件，然后进入工具-邮件发出测试，测试你设置的邮箱是否可用。</p><p>配置成功！！</p>]]></content>
+    <content type="html"><![CDATA[<div class="note warning">            <p>本文资源包<a href="https://www.lanzous.com/iastpmj">点此下载</a>，密码为<strong>yuzh</strong></p>          </div><h1 id="教你搭建一个专业的论坛系统—Xenforo"><a href="#教你搭建一个专业的论坛系统—Xenforo" class="headerlink" title="教你搭建一个专业的论坛系统—Xenforo"></a>教你搭建一个专业的论坛系统—Xenforo</h1><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装宝塔Linux面板"><a href="#安装宝塔Linux面板" class="headerlink" title="安装宝塔Linux面板"></a>安装宝塔Linux面板</h3><p>进入<a href="https://bt.cn/">宝塔官网</a>，参考官网文档下载安装。</p><div class="note warning">            <p>根据需要选择运行库！</p><a id="more"></a><p>MySql至少需为5.7，php至少需为7.3！！</p><p>如下图所示</p><p><img src="https://i.loli.net/2020/04/02/5UgycltGjp8dx7J.png" alt="运行库"></p>          </div><p><img src="" alt="安装环境"></p><div class="note success">            <p>经过漫长的等待，等待安装完成</p>          </div><hr><h2 id="下载论坛资源包"><a href="#下载论坛资源包" class="headerlink" title="下载论坛资源包"></a>下载论坛资源包</h2><p>接下来，下载我打包的Xenforo包（有钱人请<a href="https://xenforo.com/">支持正版！！</a>），并放到你服务器上。</p><hr><h2 id="在宝塔内添加动态网站"><a href="#在宝塔内添加动态网站" class="headerlink" title="在宝塔内添加动态网站"></a>在宝塔内添加动态网站</h2><p>如下图所示，自行配置，要记住mysql的账号和密码（不记住也可，可以自己去找）</p><p><img src="https://i.loli.net/2020/04/02/HvfBCKjxsMOmklV.png" alt="新建网站"></p><div class="note warning">            <p>端口一定要记住！！</p>          </div><hr><h2 id="导入网站资源包"><a href="#导入网站资源包" class="headerlink" title="导入网站资源包"></a>导入网站资源包</h2><p>将xenforo_2.1.8_Patch_1文件夹中的upload文件夹中的内容上传至网站的根目录（其实剪切过去更快），然后把upload文件夹中的内容剪切到根目录，结果如下图所示</p><p><img src="https://i.loli.net/2020/04/02/hzOu291DJTIjcHw.png" alt="install"></p><p>然后打开网站&lt;服务器IP&gt;:&lt;你之前设置的端口&gt;</p><p>打开后可能会有下面的提示，可以在宝塔中更改php的配置—禁用函数</p><p><img src="https://i.loli.net/2020/04/02/pm2l4TPy67DBbtM.png" alt="warning"></p><p>找到exec，proc_open，popen这三项，删掉，重启php服务。</p><p><img src="https://i.loli.net/2020/04/02/DI8whbylKMUjqin.png" alt="delete"></p><p>重新进入网站，成功！</p><p><img src="https://i.loli.net/2020/04/02/zJEtg2hAK8sFrc1.png" alt="success!!"></p><p>点击next，输入mysql的账户和密码</p><p><img src="https://i.loli.net/2020/04/02/i8fsg32MNT6nBoL.png" alt="账号密码"></p><p>点击Save config，然后Contiune，Begin Installation</p><p><img src="https://i.loli.net/2020/04/02/CPbo8nOlDKYVj1m.png" alt="processing..."></p><p>等待1-5分钟，输入管理员用户信息（自己设置），下一步Send anonymous server statistics 不用选，没有用。</p><p>最后，提示进入管理系统，自行登录。</p><div class="note success">            <p>Xenforo安装成功</p>          </div><hr><h2 id="为Xenforo配置中文语言包"><a href="#为Xenforo配置中文语言包" class="headerlink" title="为Xenforo配置中文语言包"></a>为Xenforo配置中文语言包</h2><p>首先，进入论坛管理系统。</p><p>进入Appearance-Languages</p><p><img src="https://i.loli.net/2020/04/02/Vi5lhdprxtzuj2e.png" alt="language"></p><p>点击“浏览”，上传资源包中的XenforoChinesePACK.xml，然后单击“Import”。结束后，选择“简体中文”。</p><p><img src="https://i.loli.net/2020/04/02/3mrionYKcxjTJNC.png" alt="import"></p><div class="note success">            <p>中文语言包安装成功</p>          </div><hr><p>然后，进入设置-选项-用户注册选项-为游客开启CAPTCHA，选择“使用问题 &amp; 回答 CAPTCHA”，然后单击“使用明确的问题”</p><p><img src="https://i.loli.net/2020/04/02/p7lJDdTUSyFNnfQ.png" alt="CAPTCHA"></p><p>设置好你自己的问题和答案，如下图所示。</p><p><img src="https://i.loli.net/2020/04/02/Q9xHYyRk5BM8I7s.png" alt="Q&amp;A"></p><p>最后，进入设置-选项-邮件系统选项，设置好你自己的邮件，然后进入工具-邮件发出测试，测试你设置的邮箱是否可用。</p><div class="note success">            <p>配置成功！！</p>          </div>]]></content>
     
     
     <summary type="html">教你搭建一个专业的论坛系统---Xenforo</summary>
@@ -304,8 +304,8 @@
   
   <entry>
     <title>一句命令教你找到Linux中的特大文件</title>
-    <link href="http://blog.hexoian.cn/linux_delete_large_file/"/>
-    <id>http://blog.hexoian.cn/linux_delete_large_file/</id>
+    <link href="http://blog.hexoian.cn/posts/linux_delete_large_file/"/>
+    <id>http://blog.hexoian.cn/posts/linux_delete_large_file/</id>
     <published>2020-03-25T11:00:00.000Z</published>
     <updated>2020-07-19T15:11:10.698Z</updated>
     
@@ -323,8 +323,8 @@
   
   <entry>
     <title>如何为你的树莓派安装一个好看的主题---Butterfly</title>
-    <link href="http://blog.hexoian.cn/hexo_theme_butterfly/"/>
-    <id>http://blog.hexoian.cn/hexo_theme_butterfly/</id>
+    <link href="http://blog.hexoian.cn/posts/hexo_theme_butterfly/"/>
+    <id>http://blog.hexoian.cn/posts/hexo_theme_butterfly/</id>
     <published>2020-03-12T00:00:00.000Z</published>
     <updated>2020-07-19T15:11:52.184Z</updated>
     
@@ -342,8 +342,8 @@
   
   <entry>
     <title>如何用树莓派搭建可视化的aria2挂机下载器</title>
-    <link href="http://blog.hexoian.cn/raspi_aria2_install/"/>
-    <id>http://blog.hexoian.cn/raspi_aria2_install/</id>
+    <link href="http://blog.hexoian.cn/posts/raspi_aria2_install/"/>
+    <id>http://blog.hexoian.cn/posts/raspi_aria2_install/</id>
     <published>2020-02-29T14:00:00.000Z</published>
     <updated>2020-07-19T15:10:07.037Z</updated>
     
@@ -362,8 +362,8 @@
   
   <entry>
     <title>如何为你的Linux装上宝塔面板5.9(稳定版)</title>
-    <link href="http://blog.hexoian.cn/raspi_bt_install/"/>
-    <id>http://blog.hexoian.cn/raspi_bt_install/</id>
+    <link href="http://blog.hexoian.cn/posts/raspi_bt_install/"/>
+    <id>http://blog.hexoian.cn/posts/raspi_bt_install/</id>
     <published>2020-02-26T14:00:00.000Z</published>
     <updated>2020-07-19T15:09:58.490Z</updated>
     
@@ -387,8 +387,8 @@
   
   <entry>
     <title>如何为你宝贵的树莓派定做一个温控风扇</title>
-    <link href="http://blog.hexoian.cn/raspi_smart_fan/"/>
-    <id>http://blog.hexoian.cn/raspi_smart_fan/</id>
+    <link href="http://blog.hexoian.cn/posts/raspi_smart_fan/"/>
+    <id>http://blog.hexoian.cn/posts/raspi_smart_fan/</id>
     <published>2020-02-25T05:00:00.000Z</published>
     <updated>2020-07-19T15:09:51.675Z</updated>
     
@@ -420,8 +420,8 @@
   
   <entry>
     <title>如何为你心爱的树莓派4B装上Ubuntu Server 18.04 LTS (armhf)</title>
-    <link href="http://blog.hexoian.cn/raspi_ubuntu_deploy/"/>
-    <id>http://blog.hexoian.cn/raspi_ubuntu_deploy/</id>
+    <link href="http://blog.hexoian.cn/posts/raspi_ubuntu_deploy/"/>
+    <id>http://blog.hexoian.cn/posts/raspi_ubuntu_deploy/</id>
     <published>2020-02-22T13:00:00.000Z</published>
     <updated>2020-07-19T15:09:41.513Z</updated>
     
