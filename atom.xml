@@ -6,7 +6,7 @@
   <link href="http://blog.hexoian.cn/atom.xml" rel="self"/>
   
   <link href="http://blog.hexoian.cn/"/>
-  <updated>2021-03-21T08:53:08.503Z</updated>
+  <updated>2022-04-04T09:26:26.409Z</updated>
   <id>http://blog.hexoian.cn/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Schtasks的自动打铃机使用教程</title>
+    <link href="http://blog.hexoian.cn/posts/Automatic_Ring/"/>
+    <id>http://blog.hexoian.cn/posts/Automatic_Ring/</id>
+    <published>2022-04-04T00:00:00.000Z</published>
+    <updated>2022-04-04T09:26:26.409Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基于Schtasks的自动打铃机使用教程"><a href="#基于Schtasks的自动打铃机使用教程" class="headerlink" title="基于Schtasks的自动打铃机使用教程"></a>基于Schtasks的自动打铃机使用教程</h1><blockquote><p>本脚本已开源在我的Github。<a href="https://github.com/yuzh0816/tools/tree/master/RING">点我直达</a></p></blockquote><blockquote><p><a href="https://www.bilibili.com/video/BV1M34y147U1/">视频教程点我直达</a></p></blockquote><p><strong>注意！！请将本文件夹(“RING”)放置于C盘根目录！！</strong></p><p><strong>建议使用Windows Media Player作为音频文件默认打开方式！</strong></p><h2 id="一、启用打铃功能"><a href="#一、启用打铃功能" class="headerlink" title="一、启用打铃功能"></a>一、启用打铃功能</h2><ol><li><p>点击“启用计划任务”<br> Tips：可能会提醒密码，如果电脑有密码就输入电脑密码</p><pre><code> 如果设置了微软账户请 a. 尝试输入微软账户密码而不是PIN  b. 直接回车 如果提示&quot;成功设定计划任务&quot;即代表成功。</code></pre></li><li><p>进入“声卡驱动安装”文件夹，点击VBCABLE_Setup_x64.exe，安装好后执行第三步</p></li><li><p>双击“启用虚拟声卡”</p></li><li><p>进入腾讯会议，将麦克风设置为默认设备</p></li><li><p>将扬声器设置为默认扬声器（通常为“扬声器（High Definition Audio Device）”）</p></li><li><p>打开麦克风</p></li></ol><h2 id="二、关闭打铃功能"><a href="#二、关闭打铃功能" class="headerlink" title="二、关闭打铃功能"></a>二、关闭打铃功能</h2><ol><li>双击“恢复如初”即可</li></ol><h2 id="三、关闭打铃功能后想再打开怎么办"><a href="#三、关闭打铃功能后想再打开怎么办" class="headerlink" title="三、关闭打铃功能后想再打开怎么办"></a>三、关闭打铃功能后想再打开怎么办</h2><ol><li>参照第一大点重新操作一遍即可</li></ol>]]></content>
+    
+    
+    <summary type="html">基于Schtasks的自动打铃机，已开源。</summary>
+    
+    
+    
+    
+    <category term="干货" scheme="http://blog.hexoian.cn/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NexT! Hello World.</title>
+    <link href="http://blog.hexoian.cn/posts/NexT_hello_world/"/>
+    <id>http://blog.hexoian.cn/posts/NexT_hello_world/</id>
+    <published>2021-08-21T11:17:31.429Z</published>
+    <updated>2020-07-19T15:07:50.690Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="博客全新改版"><a href="#博客全新改版" class="headerlink" title="博客全新改版"></a>博客全新改版</h1><h2 id="博客主要更新"><a href="#博客主要更新" class="headerlink" title="博客主要更新"></a>博客主要更新</h2><a id="more"></a><h3 id="更换主题为NexT"><a href="#更换主题为NexT" class="headerlink" title="更换主题为NexT"></a>更换主题为NexT</h3><h3 id="更换域名为blog-hexoian-cn"><a href="#更换域名为blog-hexoian-cn" class="headerlink" title="更换域名为blog.hexoian.cn"></a>更换域名为blog.hexoian.cn</h3>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;博客全新改版&quot;&gt;&lt;a href=&quot;#博客全新改版&quot; class=&quot;headerlink&quot; title=&quot;博客全新改版&quot;&gt;&lt;/a&gt;博客全新改版&lt;/h1&gt;&lt;h2 id=&quot;博客主要更新&quot;&gt;&lt;a href=&quot;#博客主要更新&quot; class=&quot;headerlink&quot; title=&quot;博客主要更新&quot;&gt;&lt;/a&gt;博客主要更新&lt;/h2&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>UsbEAM Hosts Editor 汉化版</title>
@@ -58,23 +94,6 @@
     
     
     <category term="软件" scheme="http://blog.hexoian.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NexT! Hello World.</title>
-    <link href="http://blog.hexoian.cn/posts/NexT_hello_world/"/>
-    <id>http://blog.hexoian.cn/posts/NexT_hello_world/</id>
-    <published>2021-02-04T15:22:32.809Z</published>
-    <updated>2020-07-19T15:07:50.690Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="博客全新改版"><a href="#博客全新改版" class="headerlink" title="博客全新改版"></a>博客全新改版</h1><h2 id="博客主要更新"><a href="#博客主要更新" class="headerlink" title="博客主要更新"></a>博客主要更新</h2><a id="more"></a><h3 id="更换主题为NexT"><a href="#更换主题为NexT" class="headerlink" title="更换主题为NexT"></a>更换主题为NexT</h3><h3 id="更换域名为blog-hexoian-cn"><a href="#更换域名为blog-hexoian-cn" class="headerlink" title="更换域名为blog.hexoian.cn"></a>更换域名为blog.hexoian.cn</h3>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;博客全新改版&quot;&gt;&lt;a href=&quot;#博客全新改版&quot; class=&quot;headerlink&quot; title=&quot;博客全新改版&quot;&gt;&lt;/a&gt;博客全新改版&lt;/h1&gt;&lt;h2 id=&quot;博客主要更新&quot;&gt;&lt;a href=&quot;#博客主要更新&quot; class=&quot;headerlink&quot; title=&quot;博客主要更新&quot;&gt;&lt;/a&gt;博客主要更新&lt;/h2&gt;</summary>
-    
-    
-    
     
   </entry>
   
@@ -412,30 +431,6 @@
 &lt;p&gt;一个1kΩ的电阻&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;推荐金属膜电阻，方便耐用。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="树莓派" scheme="http://blog.hexoian.cn/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何为你心爱的树莓派4B装上Ubuntu Server 18.04 LTS (armhf)</title>
-    <link href="http://blog.hexoian.cn/posts/raspi_ubuntu_deploy/"/>
-    <id>http://blog.hexoian.cn/posts/raspi_ubuntu_deploy/</id>
-    <published>2020-02-22T13:00:00.000Z</published>
-    <updated>2020-07-19T15:09:41.513Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。</p></blockquote><blockquote><p>所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线</p></blockquote><a id="more"></a><h2 id="下载Ubuntu并完成烧录"><a href="#下载Ubuntu并完成烧录" class="headerlink" title="下载Ubuntu并完成烧录"></a>下载Ubuntu并完成烧录</h2><h3 id="下载Ubuntu"><a href="#下载Ubuntu" class="headerlink" title="下载Ubuntu"></a>下载Ubuntu</h3><p>前往<a href="https://wiki.ubuntu.com/ARM/RaspberryPi">Ubuntu Wiki</a>，下载ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz</p><p><img src="https://i.loli.net/2020/02/22/U2osiMEFJ7DTeOv.png" alt=" ubuntu-18.04.3-preinstalled-server-armhf+raspi3.img.xz "></p><h3 id="烧录Ubuntu"><a href="#烧录Ubuntu" class="headerlink" title="烧录Ubuntu"></a>烧录Ubuntu</h3><h4 id="下载balelnaEtcher"><a href="#下载balelnaEtcher" class="headerlink" title="下载balelnaEtcher"></a>下载balelnaEtcher</h4><p>前往<a href="https://www.balena.io/etcher/">balenaEtcher官网</a>下载，版本自选。</p><p><img src="https://i.loli.net/2020/02/22/pQs5agCUucVvljM.png" alt="balelnaEtcher"></p><h4 id="烧录镜像文件"><a href="#烧录镜像文件" class="headerlink" title="烧录镜像文件"></a>烧录镜像文件</h4><p>注意备份！！烧录会格式化你的存储设备！！</p><ol><li>选择你下载的镜像文件</li><li>选择你的SD卡</li><li>Flash！</li></ol><p><img src="https://i.loli.net/2020/02/22/EhB5u32tDrdbcSF.png" alt="flash"></p><h2 id="覆盖原有驱动"><a href="#覆盖原有驱动" class="headerlink" title="覆盖原有驱动"></a>覆盖原有驱动</h2><ol><li>将原有boot分区文件删除</li><li>下载<a href="https://www.lanzous.com/i9kw4oj">boot驱动包</a></li><li>解压后把所有文件粘贴至boot分区</li></ol><p>完成！</p><h2 id="开机并远程ssh"><a href="#开机并远程ssh" class="headerlink" title="开机并远程ssh"></a>开机并远程ssh</h2><p>把SD卡插入树莓派，插电，插网线，启动。</p><p>等待约1分钟时间，进入路由器管理界面，有一台名为ubuntu的设备。记录下IP地址。</p><p><img src="https://i.loli.net/2020/02/22/C82FMv9WzxUodye.png" alt="Ubuntu IP"></p><p>打开Powershell，输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ubuntu@你记录到的IP</span><br></pre></td></tr></table></figure><p>初始密码为ubuntu，接下来按照提示操作。先输入一遍ubuntu，然后设置自己想要的密码。</p><h2 id="更换更新源"><a href="#更换更新源" class="headerlink" title="更换更新源"></a>更换更新源</h2><p>编辑文件/etc/apt/sources.list</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>输入内容</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 预发布软件源，不建议启用</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse</span></span><br></pre></td></tr></table></figure><p>Ctrl+O保存，然后Ctrl+X退出。</p><p>更新软件及系统</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure><p>恭喜，成功在树莓派4B上安装Ubuntu Server 18.04！</p><h2 id="点赞，收藏，评论！！"><a href="#点赞，收藏，评论！！" class="headerlink" title="点赞，收藏，评论！！"></a>点赞，收藏，评论！！</h2>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;前言：虽然Canonical已经发布了Ubuntu Server 18.04，但是驱动好像并不完善，而Arm64的软件源远不及Armhf，于是便有了这篇自己折腾出来的安装教程。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;所需装备：一台树莓派4B，一张大于等于8G的SD卡，一根网线&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
     
     
     
