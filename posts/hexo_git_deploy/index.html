@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -14,16 +14,18 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yuzh.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="将Hexo博客框架上传至Github Page，搭建免费个人主页">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何将Hexo博客框架上传至Github Page，搭建免费个人主页">
-<meta property="og:url" content="http://blog.hexoian.cn/posts/hexo_git_deploy/index.html">
+<meta property="og:url" content="https://yuzh.tech/posts/hexo_git_deploy/index.html">
 <meta property="og:site_name" content="yuzh的博客">
 <meta property="og:description" content="将Hexo博客框架上传至Github Page，搭建免费个人主页">
 <meta property="og:locale" content="zh_CN">
@@ -35,13 +37,13 @@
 <meta property="og:image" content="https://i.loli.net/2020/02/20/6OhiGfC8gNeWv1M.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/20/xtZsLaVupibFglR.png">
 <meta property="article:published_time" content="2020-02-20T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-04T09:20:26.353Z">
+<meta property="article:modified_time" content="2024-08-03T15:34:33.345Z">
 <meta property="article:author" content="yuzh">
 <meta property="article:tag" content="干货">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/20/GQX7YlVtx8d9ZO3.png">
 
-<link rel="canonical" href="http://blog.hexoian.cn/posts/hexo_git_deploy/">
+<link rel="canonical" href="https://yuzh.tech/posts/hexo_git_deploy/">
 
 
 <script id="page-configurations">
@@ -85,7 +87,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="yuzh的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="yuzh的博客" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -109,7 +111,7 @@
       <h1 class="site-title">yuzh的博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Talk is Cheap, Show Me the Code.</p>
+      <p class="site-subtitle" itemprop="description">❤ ECUST ❤</p>
   </div>
 
   <div class="site-nav-right">
@@ -128,9 +130,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -161,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/hexo_git_deploy/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/hexo_git_deploy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -191,10 +203,31 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-04 17:20:26" itemprop="dateModified" datetime="2022-04-04T17:20:26+08:00">2022-04-04</time>
+                <time title="修改时间：2024-08-03 23:34:33" itemprop="dateModified" datetime="2024-08-03T23:34:33+08:00">2024-08-03</time>
               </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/hexo_git_deploy/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/hexo_git_deploy/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
             <div class="post-description">将Hexo博客框架上传至Github Page，搭建免费个人主页</div>
 
         </div>
@@ -207,9 +240,9 @@
 
       
         <h1 id="如何将Hexo博客框架上传至Github-Page，搭建免费个人主页"><a href="#如何将Hexo博客框架上传至Github-Page，搭建免费个人主页" class="headerlink" title="如何将Hexo博客框架上传至Github Page，搭建免费个人主页"></a>如何将Hexo博客框架上传至Github Page，搭建免费个人主页</h1><blockquote>
-<p>本文是前文<a href="https://blog.hexoian.cn/2020/02/19/hexo-first-deploy/">从零开始 Hexo博客搭建</a>的后续。</p>
+<p>本文是前文<a href="/2020/02/19/hexo-first-deploy/">从零开始 Hexo博客搭建</a>的后续。</p>
 </blockquote>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="注册Github账号并新建Github-Page仓库"><a href="#注册Github账号并新建Github-Page仓库" class="headerlink" title="注册Github账号并新建Github Page仓库"></a>注册Github账号并新建Github Page仓库</h2><ol>
 <li>进入<a target="_blank" rel="noopener" href="https://github.com/">Github.com</a>注册，网站会给邮箱发一封邮件</li>
@@ -220,25 +253,30 @@
 </ol>
 <p><img src="https://i.loli.net/2020/02/20/OADauy4iWV3bXd6.png" alt="新建Github 仓库"></p>
 <h2 id="配置SSH，提高安全性"><a href="#配置SSH，提高安全性" class="headerlink" title="配置SSH，提高安全性"></a>配置SSH，提高安全性</h2><p>进入Terminal或Powershell，设置SSH</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 下面自行设置用于注册Github的邮箱，然后敲3下回车</span></span><br><span class="line">ssh-keygen -t rsa -C &quot;mail@mail.com&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下面自行设置用于注册Github的邮箱，然后敲3下回车</span></span><br><span class="line">ssh-keygen -t rsa -C &quot;mail@mail.com&quot;</span><br></pre></td></tr></table></figure>
+
 <p>你会得到如下图所示的密钥，不用管，说明成功了</p>
 <p><img src="https://i.loli.net/2020/02/20/YGuUvAl4LEzHNIr.png" alt="SHA 256"></p>
-<p>接下来进入用户目录/.ssh/id_rsa.pub（根据自己的电脑，Windows与Linux均适用），复制文档内容</p>
+<p>接下来进入用户目录&#x2F;.ssh&#x2F;id_rsa.pub（根据自己的电脑，Windows与Linux均适用），复制文档内容</p>
 <p><img src="https://i.loli.net/2020/02/20/2kU3MXxmhsoaOZw.png" alt="id_rsa.pub"></p>
 <p>接下来右上角进入Settings，左边栏SSH &amp; GPG Keys，New SSH Key，将之前复制的东西粘贴下来</p>
 <p><img src="https://i.loli.net/2020/02/20/lnT2cGBXUhIeOQs.png" alt="SSH Key"></p>
 <p>进入Terminal或Powershell，输入下面的命令测试</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 会出现Are you sure you want to <span class="built_in">continue</span> connecting (yes/no)?的提示，输入yes</span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">会出现Are you sure you want to <span class="built_in">continue</span> connecting (<span class="built_in">yes</span>/no)?的提示，输入<span class="built_in">yes</span></span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
 <p>然后如果出现下图所示的提示，代表成功了！</p>
 <p><img src="https://i.loli.net/2020/02/20/6OhiGfC8gNeWv1M.png" alt="successful authenticated"></p>
 <p>接下来还差最后一步，配置账户名和邮箱</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yuzh0816&quot;</span><br><span class="line">git config --global user.email  &quot;2235943809@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
 <p>大功告成，我们已经拥有了完整的博客仓库配置！！</p>
 <h2 id="修改博客配置，以成功上传至Github-Pages"><a href="#修改博客配置，以成功上传至Github-Pages" class="headerlink" title="修改博客配置，以成功上传至Github Pages"></a>修改博客配置，以成功上传至Github Pages</h2><h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><p>进入博客根目录，编辑_config.yml，翻到最下面</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="comment"># repo 根据自己的账户来填写</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:yuzh0816/yuzh0816.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
 <p>如下图所示</p>
 <p><img src="https://i.loli.net/2020/02/20/xtZsLaVupibFglR.png" alt="deploy"></p>
-<h3 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g # 也可以hexo g -d</span><br><span class="line"><span class="meta">#</span><span class="bash"> hexo d : hexo deploy，部署Hexo</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> hexo g : hexo generate，生成博客</span></span><br></pre></td></tr></table></figure>
+<h3 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g # 也可以hexo g -d</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hexo d : hexo deploy，部署Hexo</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hexo g : hexo generate，生成博客</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="如何访问Github-Pages"><a href="#如何访问Github-Pages" class="headerlink" title="如何访问Github Pages"></a>如何访问Github Pages</h2><p>进入_____.github.io即可</p>
 
     </div>
@@ -277,6 +315,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -337,13 +376,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -369,16 +410,36 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">yuzh</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -401,7 +462,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -428,6 +489,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'Woo8djp4cPIb7JjuvOWlehG5-gzGzoHsz',
+      appKey     : 'PAUZpKb8NBT691TMRsHPdnMS',
+      placeholder: "说点什么吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

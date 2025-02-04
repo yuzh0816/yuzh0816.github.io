@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -14,18 +14,20 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yuzh.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="侵权删！侵权删！侵权删！侵权请告示&amp;#x32;&amp;#50;&amp;#x33;&amp;#53;&amp;#x39;&amp;#x34;&amp;#51;&amp;#56;&amp;#48;&amp;#x39;&amp;#x40;&amp;#113;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#109;，会立刻删除！如何利用本地服务器，解锁网易云音乐客户端变灰歌曲安装nodejs及git前文已有提到，此处不再赘述。 如何安装nodejs及git 安装UnblockNeteas">
+  <meta name="description" content="侵权删！侵权删！侵权删！侵权请告示&#x32;&#x32;&#x33;&#x35;&#x39;&#52;&#x33;&#56;&#x30;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;，会立刻删除！如何利用本地服务器，解锁网易云音乐客户端变灰歌曲安装nodejs及git前文已有提到，此处不再赘述。 如何安装nodejs及git 安装UnblockNet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何利用本地服务器，解锁网易云音乐客户端变灰歌曲">
-<meta property="og:url" content="http://blog.hexoian.cn/posts/net_ease_unlock/index.html">
+<meta property="og:url" content="https://yuzh.tech/posts/net_ease_unlock/index.html">
 <meta property="og:site_name" content="yuzh的博客">
-<meta property="og:description" content="侵权删！侵权删！侵权删！侵权请告示&amp;#x32;&amp;#50;&amp;#x33;&amp;#53;&amp;#x39;&amp;#x34;&amp;#51;&amp;#56;&amp;#48;&amp;#x39;&amp;#x40;&amp;#113;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#109;，会立刻删除！如何利用本地服务器，解锁网易云音乐客户端变灰歌曲安装nodejs及git前文已有提到，此处不再赘述。 如何安装nodejs及git 安装UnblockNeteas">
+<meta property="og:description" content="侵权删！侵权删！侵权删！侵权请告示&#x32;&#x32;&#x33;&#x35;&#x39;&#52;&#x33;&#56;&#x30;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;，会立刻删除！如何利用本地服务器，解锁网易云音乐客户端变灰歌曲安装nodejs及git前文已有提到，此处不再赘述。 如何安装nodejs及git 安装UnblockNet">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/02/21/j1I4TDflkzX8n9L.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/21/72OdpsMIHNh4e5o.png">
@@ -35,13 +37,13 @@
 <meta property="og:image" content="https://i.loli.net/2020/02/21/7dRVWBGxe8nQcCg.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/22/78mW5GhvK9do4IP.png">
 <meta property="article:published_time" content="2020-02-21T13:00:00.000Z">
-<meta property="article:modified_time" content="2020-07-09T08:50:17.290Z">
+<meta property="article:modified_time" content="2024-08-03T15:34:47.335Z">
 <meta property="article:author" content="yuzh">
 <meta property="article:tag" content="干货">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/02/21/j1I4TDflkzX8n9L.png">
 
-<link rel="canonical" href="http://blog.hexoian.cn/posts/net_ease_unlock/">
+<link rel="canonical" href="https://yuzh.tech/posts/net_ease_unlock/">
 
 
 <script id="page-configurations">
@@ -85,7 +87,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="yuzh的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="yuzh的博客" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -109,7 +111,7 @@
       <h1 class="site-title">yuzh的博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Talk is Cheap, Show Me the Code.</p>
+      <p class="site-subtitle" itemprop="description">❤ ECUST ❤</p>
   </div>
 
   <div class="site-nav-right">
@@ -128,9 +130,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -161,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/net_ease_unlock/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/net_ease_unlock/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -191,10 +203,31 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-09 16:50:17" itemprop="dateModified" datetime="2020-07-09T16:50:17+08:00">2020-07-09</time>
+                <time title="修改时间：2024-08-03 23:34:47" itemprop="dateModified" datetime="2024-08-03T23:34:47+08:00">2024-08-03</time>
               </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/net_ease_unlock/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/net_ease_unlock/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -205,20 +238,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="侵权删！侵权删！侵权删！"><a href="#侵权删！侵权删！侵权删！" class="headerlink" title="侵权删！侵权删！侵权删！"></a>侵权删！侵权删！侵权删！</h1><h1 id="侵权请告示-x32-50-x33-53-x39-x34-51-56-48-x39-x40-113-x71-46-99-111-109-，会立刻删除！"><a href="#侵权请告示-x32-50-x33-53-x39-x34-51-56-48-x39-x40-113-x71-46-99-111-109-，会立刻删除！" class="headerlink" title="侵权请告示&#x32;&#50;&#x33;&#53;&#x39;&#x34;&#51;&#56;&#48;&#x39;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;，会立刻删除！"></a>侵权请告示<a href="mailto:&#x32;&#50;&#x33;&#53;&#x39;&#x34;&#51;&#56;&#48;&#x39;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#x32;&#50;&#x33;&#53;&#x39;&#x34;&#51;&#56;&#48;&#x39;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a>，会立刻删除！</h1><h1 id="如何利用本地服务器，解锁网易云音乐客户端变灰歌曲"><a href="#如何利用本地服务器，解锁网易云音乐客户端变灰歌曲" class="headerlink" title="如何利用本地服务器，解锁网易云音乐客户端变灰歌曲"></a>如何利用本地服务器，解锁网易云音乐客户端变灰歌曲</h1><h2 id="安装nodejs及git"><a href="#安装nodejs及git" class="headerlink" title="安装nodejs及git"></a>安装nodejs及git</h2><p>前文已有提到，此处不再赘述。</p>
-<p><a href="https://blog.hexoian.cn/2020/02/19/hexo-first-deploy/#%E5%AE%89%E8%A3%85nodejs-1">如何安装nodejs及git</a></p>
+        <h1 id="侵权删！侵权删！侵权删！"><a href="#侵权删！侵权删！侵权删！" class="headerlink" title="侵权删！侵权删！侵权删！"></a>侵权删！侵权删！侵权删！</h1><h1 id="侵权请告示-x32-x32-x33-x35-x39-52-x33-56-x30-57-64-113-113-x2e-x63-x6f-109-，会立刻删除！"><a href="#侵权请告示-x32-x32-x33-x35-x39-52-x33-56-x30-57-64-113-113-x2e-x63-x6f-109-，会立刻删除！" class="headerlink" title="侵权请告示&#x32;&#x32;&#x33;&#x35;&#x39;&#52;&#x33;&#56;&#x30;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;，会立刻删除！"></a>侵权请告示<a href="mailto:&#x32;&#x32;&#x33;&#x35;&#x39;&#52;&#x33;&#56;&#x30;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x32;&#x32;&#x33;&#x35;&#x39;&#52;&#x33;&#56;&#x30;&#57;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#109;</a>，会立刻删除！</h1><h1 id="如何利用本地服务器，解锁网易云音乐客户端变灰歌曲"><a href="#如何利用本地服务器，解锁网易云音乐客户端变灰歌曲" class="headerlink" title="如何利用本地服务器，解锁网易云音乐客户端变灰歌曲"></a>如何利用本地服务器，解锁网易云音乐客户端变灰歌曲</h1><h2 id="安装nodejs及git"><a href="#安装nodejs及git" class="headerlink" title="安装nodejs及git"></a>安装nodejs及git</h2><p>前文已有提到，此处不再赘述。</p>
+<p><a href="/2020/02/19/hexo-first-deploy/#%E5%AE%89%E8%A3%85nodejs-1">如何安装nodejs及git</a></p>
 <h2 id="安装UnblockNeteaseMusic"><a href="#安装UnblockNeteaseMusic" class="headerlink" title="安装UnblockNeteaseMusic"></a>安装UnblockNeteaseMusic</h2><h3 id="Git-Clone-目标仓库"><a href="#Git-Clone-目标仓库" class="headerlink" title="Git Clone 目标仓库"></a>Git Clone 目标仓库</h3><p>进入Terminal或Powershell，输入如下命令Clone仓库内容</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git</span><br><span class="line">cd UnblockNeteaseMusic</span><br></pre></td></tr></table></figure>
+
 <p>获取网易云服务器地址，并复制下来，如下图所示</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping music.163.com</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://i.loli.net/2020/02/21/j1I4TDflkzX8n9L.png" alt="ping"></p>
 <p>使用node开启服务，-p后面的是端口号，自行设置，-f后面的是你获取到的ip地址</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js -p 8000 -f 59.111.181.38</span><br></pre></td></tr></table></figure>
+
 <p>等待数秒，你会看到下图的东西</p>
 <p><img src="https://i.loli.net/2020/02/21/72OdpsMIHNh4e5o.png" alt="server running"></p>
 <p>恭喜，成功90%</p>
 <h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><h3 id="Windows配置"><a href="#Windows配置" class="headerlink" title="Windows配置"></a>Windows配置</h3><h4 id="UWP网易云音乐"><a href="#UWP网易云音乐" class="headerlink" title="UWP网易云音乐"></a>UWP网易云音乐</h4><p>打开Powershell（以管理员身份运行）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">checknetisolation loopbackexempt -a -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;</span><br></pre></td></tr></table></figure>
+
 <p>成功后会显示OK</p>
 <p><img src="https://i.loli.net/2020/02/21/2yGfdhKgq1NMX8a.png" alt="OK"></p>
 <p>进入设置—网络与Internet—代理</p>
@@ -245,7 +282,7 @@
 </ol>
 <p><img src="https://i.loli.net/2020/02/21/7dRVWBGxe8nQcCg.png" alt="高级选项"></p>
 <ol start="4">
-<li>设置自动代理，PAC地址为 http://&lt;服务器IP地址&gt;:&lt;端口号&gt;/proxy.pac</li>
+<li>设置自动代理，PAC地址为 http:&#x2F;&#x2F;&lt;服务器IP地址&gt;:&lt;端口号&gt;&#x2F;proxy.pac</li>
 </ol>
 <p><img src="https://i.loli.net/2020/02/22/78mW5GhvK9do4IP.png" alt="PAC"></p>
 <p>打开网易云音乐，成功！</p>
@@ -288,6 +325,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -334,7 +372,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">侵权删！侵权删！侵权删！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%B5%E6%9D%83%E8%AF%B7%E5%91%8A%E7%A4%BA-x32-50-x33-53-x39-x34-51-56-48-x39-x40-113-x71-46-99-111-109-%EF%BC%8C%E4%BC%9A%E7%AB%8B%E5%88%BB%E5%88%A0%E9%99%A4%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">侵权请告示&amp;#x32;&amp;#50;&amp;#x33;&amp;#53;&amp;#x39;&amp;#x34;&amp;#51;&amp;#56;&amp;#48;&amp;#x39;&amp;#x40;&amp;#113;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#109;，会立刻删除！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%98%E7%81%B0%E6%AD%8C%E6%9B%B2"><span class="nav-number">3.</span> <span class="nav-text">如何利用本地服务器，解锁网易云音乐客户端变灰歌曲</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs%E5%8F%8Agit"><span class="nav-number">3.1.</span> <span class="nav-text">安装nodejs及git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85UnblockNeteaseMusic"><span class="nav-number">3.2.</span> <span class="nav-text">安装UnblockNeteaseMusic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Clone-%E7%9B%AE%E6%A0%87%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.1.</span> <span class="nav-text">Git Clone 目标仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">客户端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.1.</span> <span class="nav-text">Windows配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UWP%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">UWP网易云音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">Windows客户端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.2.</span> <span class="nav-text">Android配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iPhone%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.3.</span> <span class="nav-text">iPhone配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%88%90"><span class="nav-number">3.4.</span> <span class="nav-text">完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E8%B5%9E%EF%BC%8C%E8%BD%AC%E5%8F%91%EF%BC%8C%E6%94%B6%E8%97%8F%EF%BC%81%EF%BC%81"><span class="nav-number">3.5.</span> <span class="nav-text">点赞，转发，收藏！！</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81%E4%BE%B5%E6%9D%83%E5%88%A0%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">侵权删！侵权删！侵权删！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%B5%E6%9D%83%E8%AF%B7%E5%91%8A%E7%A4%BA-x32-x32-x33-x35-x39-52-x33-56-x30-57-64-113-113-x2e-x63-x6f-109-%EF%BC%8C%E4%BC%9A%E7%AB%8B%E5%88%BB%E5%88%A0%E9%99%A4%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">侵权请告示2235943809@qq.com，会立刻删除！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%98%E7%81%B0%E6%AD%8C%E6%9B%B2"><span class="nav-number">3.</span> <span class="nav-text">如何利用本地服务器，解锁网易云音乐客户端变灰歌曲</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nodejs%E5%8F%8Agit"><span class="nav-number">3.1.</span> <span class="nav-text">安装nodejs及git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85UnblockNeteaseMusic"><span class="nav-number">3.2.</span> <span class="nav-text">安装UnblockNeteaseMusic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Clone-%E7%9B%AE%E6%A0%87%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.1.</span> <span class="nav-text">Git Clone 目标仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">客户端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.1.</span> <span class="nav-text">Windows配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UWP%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">UWP网易云音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">Windows客户端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.2.</span> <span class="nav-text">Android配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iPhone%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.3.</span> <span class="nav-text">iPhone配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%88%90"><span class="nav-number">3.4.</span> <span class="nav-text">完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E8%B5%9E%EF%BC%8C%E8%BD%AC%E5%8F%91%EF%BC%8C%E6%94%B6%E8%97%8F%EF%BC%81%EF%BC%81"><span class="nav-number">3.5.</span> <span class="nav-text">点赞，转发，收藏！！</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -348,13 +386,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -380,16 +420,36 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">yuzh</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -412,7 +472,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -439,6 +499,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'Woo8djp4cPIb7JjuvOWlehG5-gzGzoHsz',
+      appKey     : 'PAUZpKb8NBT691TMRsHPdnMS',
+      placeholder: "说点什么吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -14,21 +14,23 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yuzh.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="yuzh的博客">
-<meta property="og:url" content="http://blog.hexoian.cn/page/2/index.html">
+<meta property="og:url" content="https://yuzh.tech/page/2/index.html">
 <meta property="og:site_name" content="yuzh的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="yuzh">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.hexoian.cn/page/2/">
+<link rel="canonical" href="https://yuzh.tech/page/2/">
 
 
 <script id="page-configurations">
@@ -72,7 +74,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="yuzh的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="yuzh的博客" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -96,7 +98,7 @@
       <h1 class="site-title">yuzh的博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Talk is Cheap, Show Me the Code.</p>
+      <p class="site-subtitle" itemprop="description">❤ ECUST ❤</p>
   </div>
 
   <div class="site-nav-right">
@@ -115,9 +117,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -147,7 +159,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/P1113/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/BinarySearchTree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -161,7 +173,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/P1113/" class="post-title-link" itemprop="url">P1113 杂物</a>
+            <a href="/posts/BinarySearchTree/" class="post-title-link" itemprop="url">二叉查找树</a>
         </h2>
 
         <div class="post-meta">
@@ -170,18 +182,26 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-05-31 23:32:00" itemprop="dateCreated datePublished" datetime="2020-05-31T23:32:00+08:00">2020-05-31</time>
+              <time title="创建时间：2024-08-07 22:58:34 / 修改时间：23:08:07" itemprop="dateCreated datePublished" datetime="2024-08-07T22:58:34+08:00">2024-08-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-26 13:50:43" itemprop="dateModified" datetime="2020-07-26T13:50:43+08:00">2020-07-26</time>
-              </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/BinarySearchTree/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/BinarySearchTree/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -192,16 +212,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>John的农场在给奶牛挤奶前有很多杂务要完成，每一项杂务都需要一定的时间来完成它。比如：他们要将奶牛集合起来，将他们赶进牛棚，为奶牛清洗乳房以及一些其它工作。尽早将所有杂务完成是必要的，因为这样才有更多时间挤出更多的牛奶。当然，有些杂务必须在另一些杂务完成的情况下才能进行。比如：只有将奶牛赶进牛棚才能开始为它清洗乳房，还有在未给奶牛清洗乳房之前不能挤奶。我们把这些工作称为完成本项工作的准备工作。至少有一项杂务不要求有准备工作，这个可以最早着手完成的工作，标记为杂务11。John有需要完成的nn个杂务的清单，并且这份清单是有一定顺序的，杂务k(k&gt;1)k(k&gt;1)的准备工作只可能在杂务11至k-1k−1中。</p>
-<p>写一个程序从11到nn读入每个杂务的工作说明。计算出所有杂务都被完成的最短时间。当然互相没有关系的杂务可以同时工作，并且，你可以假定John的农场有足够多的工人来同时完成任意多项任务。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/P1113/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h2 id="基本实现"><a href="#基本实现" class="headerlink" title="基本实现"></a>基本实现</h2><h3 id="节点定义"><a href="#节点定义" class="headerlink" title="节点定义"></a>节点定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> val; <span class="comment">//Öµ </span></span><br><span class="line">	Node *lefttree,*righttree;<span class="comment">//×ó×ÓÊ÷£¬ÓÒ×ÓÊ÷</span></span><br><span class="line">&#125;;</span><br><span class="line">Node *root=<span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(Node *&amp;node, <span class="type">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(node==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		node = <span class="keyword">new</span> Node;</span><br><span class="line">		node-&gt;val=val;</span><br><span class="line">		node-&gt;lefttree = node-&gt;righttree = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(node-&gt;val==val) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(node-&gt;val&gt;val) <span class="built_in">insert</span>(node-&gt;lefttree, val);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">insert</span>(node-&gt;righttree, val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">search</span><span class="params">(Node *&amp;node, <span class="type">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(node==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">if</span>(node-&gt;val==val) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(node-&gt;val&gt;val) <span class="built_in">search</span>(node-&gt;lefttree, val);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">search</span>(node-&gt;righttree, val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取最大值节点和最小值节点"><a href="#获取最大值节点和最小值节点" class="headerlink" title="获取最大值节点和最小值节点"></a>获取最大值节点和最小值节点</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Node *<span class="title">max</span><span class="params">(Node *&amp;node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(node==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">if</span>(node-&gt;righttree==<span class="literal">NULL</span>) <span class="keyword">return</span> node;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(<span class="built_in">max</span>(node-&gt;righttree));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Node *<span class="title">min</span><span class="params">(Node *&amp;node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(node==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">if</span>(node-&gt;lefttree==<span class="literal">NULL</span>) <span class="keyword">return</span> node;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(<span class="built_in">max</span>(node-&gt;lefttree));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">del</span><span class="params">(Node *&amp;node, <span class="type">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(node==<span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">if</span>(node-&gt;val==val)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(node-&gt;lefttree==<span class="literal">NULL</span> &amp;&amp; node-&gt;righttree==<span class="literal">NULL</span>) node=<span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(node-&gt;lefttree!=<span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			Node *pre=<span class="built_in">max</span>(node-&gt;lefttree);</span><br><span class="line">			node-&gt;val=pre-&gt;val;</span><br><span class="line">			<span class="built_in">del</span>(node-&gt;lefttree, pre-&gt;val);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(node-&gt;righttree!=<span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			Node *aft=<span class="built_in">min</span>(node-&gt;righttree);</span><br><span class="line">			node-&gt;val=aft-&gt;val;</span><br><span class="line">			<span class="built_in">del</span>(node-&gt;righttree, aft-&gt;val);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(node-&gt;val&gt;val) <span class="built_in">del</span>(node-&gt;lefttree, val);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">del</span>(node-&gt;righttree, val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用样例"><a href="#使用样例" class="headerlink" title="使用样例"></a>使用样例</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">insert</span>(root, <span class="number">1</span>);</span><br><span class="line">	<span class="built_in">insert</span>(root,<span class="number">3</span>);</span><br><span class="line">	<span class="built_in">insert</span>(root,<span class="number">4</span>);</span><br><span class="line">	<span class="built_in">insert</span>(root,<span class="number">2</span>);</span><br><span class="line">	<span class="comment">//cout&lt;&lt;root-&gt;righttree-&gt;val;</span></span><br><span class="line">	<span class="comment">//cout&lt;&lt;search(root,3);</span></span><br><span class="line">	<span class="built_in">del</span>(root,<span class="number">4</span>);</span><br><span class="line">	cout&lt;&lt;<span class="built_in">max</span>(root)-&gt;val;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">min</span>(root)-&gt;val;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p><strong>最优情况下</strong>：二叉搜索树为完全二叉树（或者接近完全二叉树），其平均比较次数为：log(N)。</p>
+<p><strong>最差情况下</strong>：二叉搜索树退化为单支树（或者类似单支），其平均比较次数为 N。</p>
+<p>因此，需要使用<strong>平衡二叉树</strong>来确保查找、插入和删除的时间复杂度为O(log n)。</p>
+
       
     </div>
 
@@ -220,7 +248,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/topological-sort/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/linkedlist/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -234,7 +262,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/topological-sort/" class="post-title-link" itemprop="url">拓扑排序</a>
+            <a href="/posts/linkedlist/" class="post-title-link" itemprop="url">链表与下压堆栈</a>
         </h2>
 
         <div class="post-meta">
@@ -243,18 +271,26 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-05-31 23:24:00" itemprop="dateCreated datePublished" datetime="2020-05-31T23:24:00+08:00">2020-05-31</time>
+              <time title="创建时间：2024-08-06 18:37:13 / 修改时间：20:45:50" itemprop="dateCreated datePublished" datetime="2024-08-06T18:37:13+08:00">2024-08-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:09:15" itemprop="dateModified" datetime="2020-07-19T23:09:15+08:00">2020-07-19</time>
-              </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/linkedlist/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/linkedlist/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -265,16 +301,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="简单科普拓扑排序"><a href="#简单科普拓扑排序" class="headerlink" title="简单科普拓扑排序"></a>简单科普拓扑排序</h1><p>来源：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/5223807?fr=aladdin">百度百科</a></p>
-<p>对一个有向无环图(Directed Acyclic Graph简称DAG)G进行拓扑排序，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边&lt;u,v&gt;∈E(G)，则u在线性序列中出现在v之前。通常，这样的线性序列称为满足拓扑次序(Topological Order)的序列，简称拓扑序列。简单的说，由某个集合上的一个偏序得到该集合上的一个全序，这个操作称之为拓扑排序。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/topological-sort/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><h2 id="节点记录"><a href="#节点记录" class="headerlink" title="节点记录"></a>节点记录</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> item;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="构造链表"><a href="#构造链表" class="headerlink" title="构造链表"></a>构造链表</h2><p>为每个元素创造节点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Node *first=<span class="keyword">new</span> Node;</span><br><span class="line">Node *second=<span class="keyword">new</span> Node;</span><br><span class="line">Node *third=<span class="keyword">new</span> Node;</span><br></pre></td></tr></table></figure>
+
+<p>将每个结点的item域设为所需的值</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first-&gt;item=<span class="string">&quot;to&quot;</span>;</span><br><span class="line">second-&gt;item=<span class="string">&quot;be&quot;</span>;</span><br><span class="line">third-&gt;item=<span class="string">&quot;or&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>设置next域来构造链表</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">first-&gt;next=second;</span><br><span class="line">second-&gt;next=third;</span><br></pre></td></tr></table></figure>
+
+<h1 id="下压堆栈-LIFO"><a href="#下压堆栈-LIFO" class="headerlink" title="下压堆栈(LIFO)"></a>下压堆栈(LIFO)</h1><h2 id="在表头插入节点"><a href="#在表头插入节点" class="headerlink" title="在表头插入节点"></a>在表头插入节点</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Node *newNode=<span class="keyword">new</span> Node;</span><br><span class="line">	newNode-&gt;item=item;</span><br><span class="line">	newNode-&gt;next=first;</span><br><span class="line">	first=newNode;</span><br><span class="line">	N++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="从表头删除节点"><a href="#从表头删除节点" class="headerlink" title="从表头删除节点"></a>从表头删除节点</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> item=first-&gt;item;</span><br><span class="line">	first=first-&gt;next;</span><br><span class="line">	N--;</span><br><span class="line">	<span class="keyword">return</span> item;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="遍历链表"><a href="#遍历链表" class="headerlink" title="遍历链表"></a>遍历链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Node *x=first;x!=<span class="literal">NULL</span>;x=x-&gt;next)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//处理x-&gt;item</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整实现"><a href="#完整实现" class="headerlink" title="完整实现"></a>完整实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> item;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Node *first = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Node *newNode=<span class="keyword">new</span> Node;</span><br><span class="line">	newNode-&gt;item=item;</span><br><span class="line">	newNode-&gt;next=first;</span><br><span class="line">	first=newNode;</span><br><span class="line">	N++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> item=first-&gt;item;</span><br><span class="line">	first=first-&gt;next;</span><br><span class="line">	N--;</span><br><span class="line">	<span class="keyword">return</span> item;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">push</span>(<span class="number">1</span>);<span class="built_in">push</span>(<span class="number">3</span>);<span class="built_in">push</span>(<span class="number">2</span>);<span class="built_in">push</span>(<span class="number">4</span>);</span><br><span class="line">	<span class="keyword">for</span>(Node *x=first;x!=<span class="literal">NULL</span>;x=x-&gt;next)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -293,7 +339,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/P2390/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/vector/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -307,7 +353,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/P2390/" class="post-title-link" itemprop="url">P2390</a>
+            <a href="/posts/vector/" class="post-title-link" itemprop="url">C++ Vector</a>
         </h2>
 
         <div class="post-meta">
@@ -316,18 +362,26 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-05-26 23:30:00" itemprop="dateCreated datePublished" datetime="2020-05-26T23:30:00+08:00">2020-05-26</time>
+              <time title="创建时间：2024-08-06 11:33:17 / 修改时间：12:38:04" itemprop="dateCreated datePublished" datetime="2024-08-06T11:33:17+08:00">2024-08-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-26 13:50:35" itemprop="dateModified" datetime="2020-07-26T13:50:35+08:00">2020-07-26</time>
-              </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/vector/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/vector/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -338,16 +392,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>改编自USACO2007Nov铜组Exploration</p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>贝西在一条道路上旅行，道路上有许多地标，贝西想要在日落之前访问尽可能多的路标。将道路视为一条数轴，贝西从原点出发，道路上有n(1&lt;=n&lt;=50000)个地标，每个地标有一个坐标x[i](-100,000 ≤ xi ≤ 100,000)且地标的坐标各不相同，t(1≤ T ≤1000000000)分钟之后将会日落。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/P2390/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h2 id="定义方式"><a href="#定义方式" class="headerlink" title="定义方式"></a>定义方式</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;/*数据类型*/&gt;<span class="comment">/*名称*/</span>(<span class="type">int</span> nSize);</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt;vec;</span><br></pre></td></tr></table></figure>
+
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p><code>vec.push_back()</code> 在动态数组最后插入一个新的元素</p>
+<p><code>vec.pop_back()</code> 删除动态数组最后一个元素</p>
+
       
     </div>
 
@@ -366,7 +418,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/rpi_nextcloud_deploy/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/hoffman/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -380,7 +432,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/rpi_nextcloud_deploy/" class="post-title-link" itemprop="url">教你用树莓派来搭建一个NAS数据中心</a>
+            <a href="/posts/hoffman/" class="post-title-link" itemprop="url">哈夫曼编码</a>
         </h2>
 
         <div class="post-meta">
@@ -390,17 +442,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-05-10 21:00:00" itemprop="dateCreated datePublished" datetime="2020-05-10T21:00:00+08:00">2020-05-10</time>
+              <time title="创建时间：2024-08-05 23:00:52" itemprop="dateCreated datePublished" datetime="2024-08-05T23:00:52+08:00">2024-08-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:09:28" itemprop="dateModified" datetime="2020-07-19T23:09:28+08:00">2020-07-19</time>
+                <time title="修改时间：2024-08-06 20:48:50" itemprop="dateModified" datetime="2024-08-06T20:48:50+08:00">2024-08-06</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/hoffman/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/hoffman/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -411,15 +477,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="教你用树莓派来搭建一个NAS数据中心"><a href="#教你用树莓派来搭建一个NAS数据中心" class="headerlink" title="教你用树莓派来搭建一个NAS数据中心"></a>教你用树莓派来搭建一个NAS数据中心</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/rpi_nextcloud_deploy/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>不出现歧义的情况下编出来的码长度最短</p>
+<p>让出现次数多的字符编码最短</p>
+<p>每次合并最小的两个，即生成一个父节点，使得父节点的值为两个子节点的值之和</p>
+<p><img src="/posts/hoffman/hoffman.png" alt="hoffman"></p>
+
       
     </div>
 
@@ -438,7 +500,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/xenforo_deploy/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%BB%BC%E5%90%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -452,7 +514,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/xenforo_deploy/" class="post-title-link" itemprop="url">教你搭建一个专业的论坛系统---Xenforo</a>
+            <a href="/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%BB%BC%E5%90%88/" class="post-title-link" itemprop="url">排序算法综合</a>
         </h2>
 
         <div class="post-meta">
@@ -462,17 +524,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-04-01 16:00:00" itemprop="dateCreated datePublished" datetime="2020-04-01T16:00:00+08:00">2020-04-01</time>
+              <time title="创建时间：2024-08-04 20:42:23" itemprop="dateCreated datePublished" datetime="2024-08-04T20:42:23+08:00">2024-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-26 13:51:13" itemprop="dateModified" datetime="2020-07-26T13:51:13+08:00">2020-07-26</time>
+                <time title="修改时间：2025-02-04 13:52:45" itemprop="dateModified" datetime="2025-02-04T13:52:45+08:00">2025-02-04</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%BB%BC%E5%90%88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%BB%BC%E5%90%88/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -483,15 +559,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>教你搭建一个专业的论坛系统---Xenforo</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/xenforo_deploy/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>下方所有除使用STL库外的所有排序算法调用方法都是<code>qsort(a,0,n-1);</code></p>
+<h1 id="初级排序算法"><a href="#初级排序算法" class="headerlink" title="初级排序算法"></a>初级排序算法</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubblesort</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=left;i&lt;=right;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i<span class="number">+1</span>;j&lt;=right;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i]&gt;arr[j]) <span class="built_in">swap</span>(arr[i],arr[j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">selectionsort</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=left;i&lt;=right;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> min=i; </span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i<span class="number">+1</span>;j&lt;=right;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[j]&lt;arr[min]) min=j;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">swap</span>(arr[i],arr[min]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>同整理扑克牌，依次将每个元素插入到前面有序的部分。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insertionsort</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=left;i&lt;=right;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> cnt=arr[i];</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i<span class="number">-1</span>;j&gt;=left &amp;&amp; cnt&lt;=arr[j];j--)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">swap</span>(arr[j],arr[j<span class="number">+1</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优化：可以利用折半查找的方法找到插入的位置，即折半插入排序</p>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>通过给定间隔<code>h</code>，使得原来的数组被切分为更小的数组，进而提升插入排序效率</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">shellsort</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> h=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(h&lt;(right-left<span class="number">+1</span>)/<span class="number">3</span>) h=h*<span class="number">3</span><span class="number">+1</span>;</span><br><span class="line">	<span class="keyword">while</span>(h&gt;=<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=left;i&lt;(right-left<span class="number">+1</span>)/h;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> cnt=arr[i];</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j=i-h;j&gt;=left &amp;&amp; cnt&lt;=arr[j];j-=h)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">swap</span>(arr[j],arr[j+h]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		h/=<span class="number">3</span>; </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="进阶排序算法"><a href="#进阶排序算法" class="headerlink" title="进阶排序算法"></a>进阶排序算法</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> *arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> aux[<span class="number">10000</span>], mid=(left+right)/<span class="number">2</span>;</span><br><span class="line">	<span class="type">int</span> i=left, j=mid<span class="number">+1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> k=left; k&lt;=right; k++)</span><br><span class="line">	&#123;</span><br><span class="line">		aux[k]=arr[k];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> k=left;k&lt;=right;k++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&gt;mid) arr[k]=aux[j++];</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(j&gt;right) arr[k]=aux[i++];</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(aux[j]&lt;aux[i]) arr[k]=aux[j++];</span><br><span class="line">		<span class="keyword">else</span> arr[k]=aux[i++];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">mergesort</span><span class="params">(<span class="type">int</span> *arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(left&lt;right)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> mid=(left+right)/<span class="number">2</span>;</span><br><span class="line">		<span class="built_in">mergesort</span>(arr, left, mid);</span><br><span class="line">		<span class="built_in">mergesort</span>(arr, mid<span class="number">+1</span>, right);</span><br><span class="line">		<span class="built_in">merge</span>(arr, left, right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
+<li><code>partition</code>函数：以当前给定集合的第一个元素<code>pivot</code>作为基准，比其小的放在左边，比其大的放在右边</li>
+<li>随后对<code>pivot</code>左右的数组分别进行排序，直至<code>left=right</code>结束分治</li>
+</ul>
+<h3 id="手写快排"><a href="#手写快排" class="headerlink" title="手写快排"></a>手写快排</h3><ul>
+<li>可参考(全网最清晰快速排序)[<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vP411g7J3]">https://www.bilibili.com/video/BV1vP411g7J3]</a></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">partition</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> pivot=arr[left];</span><br><span class="line">	<span class="keyword">while</span>(left&lt;right)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(left&lt;right &amp;&amp; arr[right]&gt;=pivot)</span><br><span class="line">			right--;</span><br><span class="line">		arr[left]=arr[right];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(left&lt;right &amp;&amp; arr[left]&lt;=pivot)</span><br><span class="line">			left++;</span><br><span class="line">		arr[right]=arr[left];</span><br><span class="line">	&#125;</span><br><span class="line">	arr[left]=pivot; <span class="comment">//arr[right]=pivot;</span></span><br><span class="line">	<span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">qsort</span><span class="params">(<span class="type">int</span>* arr, <span class="type">int</span> left, <span class="type">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(left&lt;right)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> pivot=<span class="built_in">partition</span>(arr,left,right);</span><br><span class="line">		<span class="built_in">qsort</span>(arr,left,pivot<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">qsort</span>(arr,pivot<span class="number">+1</span>,right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="STL-sort"><a href="#STL-sort" class="headerlink" title="STL sort"></a>STL sort</h3><p>排序规则</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用：sort(a,a+n,cmp);</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a&lt;b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -510,7 +607,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/linux_delete_large_file/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/NexT_hello_world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -524,7 +621,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/linux_delete_large_file/" class="post-title-link" itemprop="url">一句命令教你找到Linux中的特大文件</a>
+            <a href="/posts/NexT_hello_world/" class="post-title-link" itemprop="url">NexT, Hello World!</a>
         </h2>
 
         <div class="post-meta">
@@ -534,17 +631,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-25 19:00:00" itemprop="dateCreated datePublished" datetime="2020-03-25T19:00:00+08:00">2020-03-25</time>
+              <time title="创建时间：2024-08-01 00:00:00" itemprop="dateCreated datePublished" datetime="2024-08-01T00:00:00+08:00">2024-08-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:11:10" itemprop="dateModified" datetime="2020-07-19T23:11:10+08:00">2020-07-19</time>
+                <time title="修改时间：2024-08-03 23:14:28" itemprop="dateModified" datetime="2024-08-03T23:14:28+08:00">2024-08-03</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/NexT_hello_world/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/NexT_hello_world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -555,15 +666,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>一句命令教你如何找到Linux中的特大文件</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/linux_delete_large_file/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h1 id="博客全新改版"><a href="#博客全新改版" class="headerlink" title="博客全新改版"></a>博客全新改版</h1><ul>
+<li><p>更换主题为NexT</p>
+</li>
+<li><p>更换域名为<a href="https://yuzh.tech/">yuzh.tech</a></p>
+</li>
+</ul>
+
       
     </div>
 
@@ -582,7 +691,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/hexo_theme_butterfly/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/Automatic_Ring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -596,7 +705,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/hexo_theme_butterfly/" class="post-title-link" itemprop="url">如何为你的树莓派安装一个好看的主题---Butterfly</a>
+            <a href="/posts/Automatic_Ring/" class="post-title-link" itemprop="url">基于Schtasks的自动打铃机使用教程</a>
         </h2>
 
         <div class="post-meta">
@@ -606,17 +715,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-12 08:00:00" itemprop="dateCreated datePublished" datetime="2020-03-12T08:00:00+08:00">2020-03-12</time>
+              <time title="创建时间：2022-04-04 08:00:00" itemprop="dateCreated datePublished" datetime="2022-04-04T08:00:00+08:00">2022-04-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:11:52" itemprop="dateModified" datetime="2020-07-19T23:11:52+08:00">2020-07-19</time>
+                <time title="修改时间：2024-08-03 23:15:47" itemprop="dateModified" datetime="2024-08-03T23:15:47+08:00">2024-08-03</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/Automatic_Ring/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/Automatic_Ring/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -627,161 +750,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>如何为你的树莓派安装一个好看的主题---Butterfly</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/hexo_theme_butterfly/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/raspi_aria2_install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuzh">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yuzh的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/raspi_aria2_install/" class="post-title-link" itemprop="url">如何用树莓派搭建可视化的aria2挂机下载器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-29 22:00:00" itemprop="dateCreated datePublished" datetime="2020-02-29T22:00:00+08:00">2020-02-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:10:07" itemprop="dateModified" datetime="2020-07-19T23:10:07+08:00">2020-07-19</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="如何用树莓派搭建可视化的aria2挂机下载器"><a href="#如何用树莓派搭建可视化的aria2挂机下载器" class="headerlink" title="如何用树莓派搭建可视化的aria2挂机下载器"></a>如何用树莓派搭建可视化的aria2挂机下载器</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p><a href="https://blog.hexoian.cn/2020/02/19/hexo-first-deploy/#%E5%AE%89%E8%A3%85nodejs/">前文</a>已经提到，不再赘述</p>
-<h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><p>只需安装宝塔即可，<a href="https://blog.hexoian.cn/2020/02/26/raspi_bt_install/">前文</a>已经提到，不再赘述</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/raspi_aria2_install/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/raspi_bt_install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuzh">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yuzh的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/raspi_bt_install/" class="post-title-link" itemprop="url">如何为你的Linux装上宝塔面板5.9(稳定版)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 22:00:00" itemprop="dateCreated datePublished" datetime="2020-02-26T22:00:00+08:00">2020-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:09:58" itemprop="dateModified" datetime="2020-07-19T23:09:58+08:00">2020-07-19</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="如何为你的Linux装上宝塔面板5-9-稳定版"><a href="#如何为你的Linux装上宝塔面板5-9-稳定版" class="headerlink" title="如何为你的Linux装上宝塔面板5.9(稳定版)"></a>如何为你的Linux装上宝塔面板5.9(稳定版)</h1><blockquote>
-<p>注意：已安装过非宝塔面板安装的Apache/Nginx/php/MySQL的系统不可安装！！</p>
+          <blockquote>
+<p>脚本已开源在<a target="_blank" rel="noopener" href="https://github.com/yuzh0816/tools/tree/master/RING">Github</a></p>
 </blockquote>
 <blockquote>
-<p>注意：32位操作系统请不要看了，宝塔不支持32位操作系统</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1M34y147U1/">视频教程</a></p>
 </blockquote>
-<p>本文的安装环境是Ubuntu 18.04 LTS (armhf)，接下来的步骤都是以本安装环境为准，不同系统请自行更改。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/raspi_bt_install/#more" rel="contents">
+              <a class="btn" href="/posts/Automatic_Ring/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -805,7 +782,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/raspi_smart_fan/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/usbeam/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -819,7 +796,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/posts/raspi_smart_fan/" class="post-title-link" itemprop="url">如何为你宝贵的树莓派定做一个温控风扇</a>
+            <a href="/posts/usbeam/" class="post-title-link" itemprop="url">UsbEAM Hosts Editor 汉化版</a>
         </h2>
 
         <div class="post-meta">
@@ -829,17 +806,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-25 13:00:00" itemprop="dateCreated datePublished" datetime="2020-02-25T13:00:00+08:00">2020-02-25</time>
+              <time title="创建时间：2021-03-17 22:52:13" itemprop="dateCreated datePublished" datetime="2021-03-17T22:52:13+08:00">2021-03-17</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-19 23:09:51" itemprop="dateModified" datetime="2020-07-19T23:09:51+08:00">2020-07-19</time>
+                <time title="修改时间：2021-03-21 16:53:08" itemprop="dateModified" datetime="2021-03-21T16:53:08+08:00">2021-03-21</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/usbeam/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/usbeam/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -850,29 +841,181 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="如何为你宝贵的树莓派定做一个温控风扇"><a href="#如何为你宝贵的树莓派定做一个温控风扇" class="headerlink" title="如何为你宝贵的树莓派定做一个温控风扇"></a>如何为你宝贵的树莓派定做一个温控风扇</h1><blockquote>
-<p>文章参考：<a target="_blank" rel="noopener" href="https://yuerblog.cc/2018/10/31/raspberry3b-pi-pnp-smart-cooling-fan/">树莓派3B PNP三极管 智能温控风扇</a></p>
-</blockquote>
-<h2 id="需要的材料"><a href="#需要的材料" class="headerlink" title="需要的材料"></a>需要的材料</h2><blockquote>
-<p>杜邦线</p>
-</blockquote>
-<p>需要所有的三种杜邦线——公对公、公对母、母对母。</p>
-<blockquote>
-<p>PNP三极管</p>
-</blockquote>
-<p>推荐TO-92型号的三极管，符合教程的需求。</p>
-<blockquote>
-<p>一个1kΩ的电阻</p>
-</blockquote>
-<p>推荐金属膜电阻，方便耐用。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/raspi_smart_fan/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h2 id="原作者博客链接"><a href="#原作者博客链接" class="headerlink" title="原作者博客链接"></a>原作者博客链接</h2><p><a target="_blank" rel="noopener" href="https://www.dogfight360.com/blog/475/">羽翼城个人博客</a></p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>解压并直接打开即可</p>
+<h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p>点击此处：<a target="_blank" rel="noopener" href="https://yuzh.lanzoui.com/iaBhpn5yyta">蓝奏云</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/paragon_extfs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuzh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuzh的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/paragon_extfs/" class="post-title-link" itemprop="url">安装Paragon ExtFS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-17 14:41:13 / 修改时间：23:10:42" itemprop="dateCreated datePublished" datetime="2021-02-17T14:41:13+08:00">2021-02-17</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/paragon_extfs/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/paragon_extfs/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>把keygen和另外两个文件放到ExtFS的安装目录下</p>
+<p>打开keygen，先点击Patch RSA 2048，选择安装目录下的Paragon ExtFS for Windows.exe</p>
+<p>再次点击 Patch RSA 2048，选择安装目录下的extservice.exe</p>
+<p>点击Generate让生成注册码，keygen会自动破解并重启ExtFS的服务。</p>
+<h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a target="_blank" rel="noopener" href="https://china.paragon-software.com/home-windows/extfs-for-windows/download.html">点此进入官网下载主程序</a></p>
+<p><a target="_blank" rel="noopener" href="https://yuzh.lanzoui.com/iPjQ5lkjx9c">点此下载Patch</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/c++_queue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuzh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuzh的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/c++_queue/" class="post-title-link" itemprop="url">STL库 QUEUE入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-03 22:02:53" itemprop="dateCreated datePublished" datetime="2020-11-03T22:02:53+08:00">2020-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-08-03 23:16:58" itemprop="dateModified" datetime="2024-08-03T23:16:58+08:00">2024-08-03</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/c++_queue/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/c++_queue/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://cdn.jsdelivr.net/gh/yuzh0816/yuzh0816.github.io/posts/c++_queue/1.jpg" alt="Queue"></p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ol>
+<li><p>入队(push):在队列末尾加入一个元素，例如:q.push(x)</p>
+</li>
+<li><p>出队(pop):删除&#x2F;弹出队列第一个元素，即队首元素，例如:q.pop()</p>
+</li>
+<li><p>访问队首元素(front):返回队列第一个元素，例如:q.front()</p>
+</li>
+<li><p>访问队尾元素(back):返回队列最后一个元素，即队尾元素，例如:q.back()</p>
+</li>
+<li><p>判断队列空(empty):判断队列是否为空，如果空，则返回true，否则返回false，例如:q.empty()</p>
+</li>
+<li><p>访问队列中元素的个数(size):返回队列元素个数，例如:q.size()</p>
+</li>
+</ol>
+
       
     </div>
 
@@ -890,7 +1033,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -956,13 +1099,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -988,16 +1133,36 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">yuzh</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -1020,7 +1185,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -1047,6 +1212,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'Woo8djp4cPIb7JjuvOWlehG5-gzGzoHsz',
+      appKey     : 'PAUZpKb8NBT691TMRsHPdnMS',
+      placeholder: "说点什么吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

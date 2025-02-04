@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -14,16 +14,18 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.hexoian.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yuzh.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="此题最简单的方法，其实前面已经有大佬@SocietyNiu讲过了，就是用Python做一个简单的打表 步骤  先输入打表后的数据 输入数据 输出表中的答案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P1009 阶乘之和">
-<meta property="og:url" content="http://blog.hexoian.cn/posts/P1009/index.html">
+<meta property="og:url" content="https://yuzh.tech/posts/P1009/index.html">
 <meta property="og:site_name" content="yuzh的博客">
 <meta property="og:description" content="此题最简单的方法，其实前面已经有大佬@SocietyNiu讲过了，就是用Python做一个简单的打表 步骤  先输入打表后的数据 输入数据 输出表中的答案">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +35,7 @@
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.hexoian.cn/posts/P1009/">
+<link rel="canonical" href="https://yuzh.tech/posts/P1009/">
 
 
 <script id="page-configurations">
@@ -77,7 +79,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="yuzh的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="yuzh的博客" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -101,7 +103,7 @@
       <h1 class="site-title">yuzh的博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Talk is Cheap, Show Me the Code.</p>
+      <p class="site-subtitle" itemprop="description">❤ ECUST ❤</p>
   </div>
 
   <div class="site-nav-right">
@@ -120,9 +122,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -153,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.hexoian.cn/posts/P1009/">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/P1009/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,6 +199,27 @@
               </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/P1009/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/P1009/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -204,13 +237,15 @@
 <li>输入数据</li>
 <li>输出表中的答案</li>
 </ol>
-<a id="more"></a>
+<span id="more"></span>
 
 <p>贴上代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> a[<span class="number">60</span>]=&#123;<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;3&quot;</span>,<span class="string">&quot;9&quot;</span>,<span class="string">&quot;33&quot;</span>,<span class="string">&quot;153&quot;</span>,<span class="string">&quot;873&quot;</span>,<span class="string">&quot;5913&quot;</span>,<span class="string">&quot;46233&quot;</span>,<span class="string">&quot;409113&quot;</span>,<span class="string">&quot;4037913&quot;</span>,<span class="string">&quot;43954713&quot;</span>,<span class="string">&quot;522956313&quot;</span>,<span class="string">&quot;6749977113&quot;</span>,<span class="string">&quot;93928268313&quot;</span>,<span class="string">&quot;1401602636313&quot;</span>,<span class="string">&quot;22324392524313&quot;</span>,<span class="string">&quot;378011820620313&quot;</span>,<span class="string">&quot;6780385526348313&quot;</span>,<span class="string">&quot;128425485935180313&quot;</span>,<span class="string">&quot;2561327494111820313&quot;</span>,<span class="string">&quot;53652269665821260313&quot;</span>,<span class="string">&quot;1177652997443428940313&quot;</span>,<span class="string">&quot;27029669736328405580313&quot;</span>,<span class="string">&quot;647478071469567844940313&quot;</span>,<span class="string">&quot;16158688114800553828940313&quot;</span>,<span class="string">&quot;419450149241406189412940313&quot;</span>,<span class="string">&quot;11308319599659758350180940313&quot;</span>,<span class="string">&quot;316196664211373618851684940313&quot;</span>,<span class="string">&quot;9157958657951075573395300940313&quot;</span>,<span class="string">&quot;274410818470142134209703780940313&quot;</span>,<span class="string">&quot;8497249472648064951935266660940313&quot;</span>,<span class="string">&quot;271628086406341595119153278820940313&quot;</span>,<span class="string">&quot;8954945705218228090637347680100940313&quot;</span>,<span class="string">&quot;304187744744822368938255957323620940313&quot;</span>,<span class="string">&quot;10637335711130967298604907294846820940313&quot;</span>,<span class="string">&quot;382630662501032184766604355445682020940313&quot;</span>,<span class="string">&quot;14146383753727377231082583937026584420940313&quot;</span>,<span class="string">&quot;537169001220328488991089808037100875620940313&quot;</span>,<span class="string">&quot;20935051082417771847631371547939998232420940313&quot;</span>,<span class="string">&quot;836850334330315506193242641144055892504420940313&quot;</span>,<span class="string">&quot;34289376947494122614363304694584807557656420940313&quot;</span>,<span class="string">&quot;1439295494700374021157505910939096377494040420940313&quot;</span>,<span class="string">&quot;61854558558074209658512637979453093884758552420940313&quot;</span>,<span class="string">&quot;2720126133346522977702138448994068984204397080420940313&quot;</span>,<span class="string">&quot;122342346998826717539665299944651784048588130840420940313&quot;</span>,<span class="string">&quot;5624964506810915667389970728744906677010239883800420940313&quot;</span>,<span class="string">&quot;264248206017979096310354325882356886646207872272920420940313&quot;</span>,<span class="string">&quot;12678163798554051767172643373255731925167694226950680420940313&quot;</span>,<span class="string">&quot;620960027832821612639424806694551108812720525606160920420940313&quot;</span>,<span class="string">&quot;31035053229546199656252032972759319953190362094566672920420940313&quot;</span>&#125;;<span class="comment">//此处为超水打表</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      <span class="keyword">int</span> n;</span><br><span class="line">      <span class="built_in">cin</span>&gt;&gt;n;<span class="comment">//读入他想让你计算的和</span></span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;a[n];<span class="comment">//输出答案</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">string a[<span class="number">60</span>]=&#123;<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;3&quot;</span>,<span class="string">&quot;9&quot;</span>,<span class="string">&quot;33&quot;</span>,<span class="string">&quot;153&quot;</span>,<span class="string">&quot;873&quot;</span>,<span class="string">&quot;5913&quot;</span>,<span class="string">&quot;46233&quot;</span>,<span class="string">&quot;409113&quot;</span>,<span class="string">&quot;4037913&quot;</span>,<span class="string">&quot;43954713&quot;</span>,<span class="string">&quot;522956313&quot;</span>,<span class="string">&quot;6749977113&quot;</span>,<span class="string">&quot;93928268313&quot;</span>,<span class="string">&quot;1401602636313&quot;</span>,<span class="string">&quot;22324392524313&quot;</span>,<span class="string">&quot;378011820620313&quot;</span>,<span class="string">&quot;6780385526348313&quot;</span>,<span class="string">&quot;128425485935180313&quot;</span>,<span class="string">&quot;2561327494111820313&quot;</span>,<span class="string">&quot;53652269665821260313&quot;</span>,<span class="string">&quot;1177652997443428940313&quot;</span>,<span class="string">&quot;27029669736328405580313&quot;</span>,<span class="string">&quot;647478071469567844940313&quot;</span>,<span class="string">&quot;16158688114800553828940313&quot;</span>,<span class="string">&quot;419450149241406189412940313&quot;</span>,<span class="string">&quot;11308319599659758350180940313&quot;</span>,<span class="string">&quot;316196664211373618851684940313&quot;</span>,<span class="string">&quot;9157958657951075573395300940313&quot;</span>,<span class="string">&quot;274410818470142134209703780940313&quot;</span>,<span class="string">&quot;8497249472648064951935266660940313&quot;</span>,<span class="string">&quot;271628086406341595119153278820940313&quot;</span>,<span class="string">&quot;8954945705218228090637347680100940313&quot;</span>,<span class="string">&quot;304187744744822368938255957323620940313&quot;</span>,<span class="string">&quot;10637335711130967298604907294846820940313&quot;</span>,<span class="string">&quot;382630662501032184766604355445682020940313&quot;</span>,<span class="string">&quot;14146383753727377231082583937026584420940313&quot;</span>,<span class="string">&quot;537169001220328488991089808037100875620940313&quot;</span>,<span class="string">&quot;20935051082417771847631371547939998232420940313&quot;</span>,<span class="string">&quot;836850334330315506193242641144055892504420940313&quot;</span>,<span class="string">&quot;34289376947494122614363304694584807557656420940313&quot;</span>,<span class="string">&quot;1439295494700374021157505910939096377494040420940313&quot;</span>,<span class="string">&quot;61854558558074209658512637979453093884758552420940313&quot;</span>,<span class="string">&quot;2720126133346522977702138448994068984204397080420940313&quot;</span>,<span class="string">&quot;122342346998826717539665299944651784048588130840420940313&quot;</span>,<span class="string">&quot;5624964506810915667389970728744906677010239883800420940313&quot;</span>,<span class="string">&quot;264248206017979096310354325882356886646207872272920420940313&quot;</span>,<span class="string">&quot;12678163798554051767172643373255731925167694226950680420940313&quot;</span>,<span class="string">&quot;620960027832821612639424806694551108812720525606160920420940313&quot;</span>,<span class="string">&quot;31035053229546199656252032972759319953190362094566672920420940313&quot;</span>&#125;;<span class="comment">//此处为超水打表</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      <span class="type">int</span> n;</span><br><span class="line">      cin&gt;&gt;n;<span class="comment">//读入他想让你计算的和</span></span><br><span class="line">      cout&lt;&lt;a[n];<span class="comment">//输出答案</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 <p>下面附上<strong>Python</strong>打表源码</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ans=<span class="number">1</span></span><br><span class="line">k=<span class="number">2</span></span><br><span class="line">last=<span class="number">1</span></span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">while</span> k&lt;=n:</span><br><span class="line">    last*=i</span><br><span class="line">    <span class="built_in">sum</span>+=last</span><br><span class="line">    k+=<span class="number">1</span></span><br><span class="line">    f.write(<span class="string">&#x27;&quot;&#x27;</span>)</span><br><span class="line">    f.write(<span class="built_in">str</span>(ans))</span><br><span class="line">    f.write(<span class="string">&#x27;&quot;,&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
 <p>配上AC链接<a target="_blank" rel="noopener" href="https://www.luogu.org/record/24483665">yuzh0816 的 AC记录</a></p>
 
     </div>
@@ -249,6 +284,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -308,13 +344,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -340,16 +378,36 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">yuzh</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -372,7 +430,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -399,6 +457,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'Woo8djp4cPIb7JjuvOWlehG5-gzGzoHsz',
+      appKey     : 'PAUZpKb8NBT691TMRsHPdnMS',
+      placeholder: "说点什么吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
