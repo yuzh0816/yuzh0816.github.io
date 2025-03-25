@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yuzh.tech","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="字符串哈希定义字符串哈希就是通过一种计算方法，将每个不同的字符串映射成不同的数值。 算法流程 把字符串映射成一个 p 进制数字。对于一个长度为 n 的字符串 s，这样定义 Hash 函数：h(s) &#x3D; ∑(i&#x3D;1 to n) s[i] × p^(n-i) (mod M)例如，字符串 abc，其哈希函数值为 a*p^2 + b*p^1 + c即 97 × 131^2 + 98 × 131^1 + 9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串基础">
+<meta property="og:url" content="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="yuzh的博客">
+<meta property="og:description" content="字符串哈希定义字符串哈希就是通过一种计算方法，将每个不同的字符串映射成不同的数值。 算法流程 把字符串映射成一个 p 进制数字。对于一个长度为 n 的字符串 s，这样定义 Hash 函数：h(s) &#x3D; ∑(i&#x3D;1 to n) s[i] × p^(n-i) (mod M)例如，字符串 abc，其哈希函数值为 a*p^2 + b*p^1 + c即 97 × 131^2 + 98 × 131^1 + 9">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/image-20250323152907285.png">
+<meta property="og:image" content="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/image-20250323153342268.png">
+<meta property="article:published_time" content="2025-03-22T15:10:00.000Z">
+<meta property="article:modified_time" content="2025-03-25T04:29:39.573Z">
+<meta property="article:author" content="yuzh">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/image-20250323152907285.png">
+
+<link rel="canonical" href="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>字符串基础 | yuzh的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/rss2.xml" title="yuzh的博客" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yuzh的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">❤ ECUST ❤</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuzh.tech/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuzh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuzh的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          字符串基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-03-22 23:10:00" itemprop="dateCreated datePublished" datetime="2025-03-22T23:10:00+08:00">2025-03-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-03-25 12:29:39" itemprop="dateModified" datetime="2025-03-25T12:29:39+08:00">2025-03-25</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>字符串哈希就是通过一种计算方法，将每个不同的字符串映射成不同的数值。</p>
+<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><ol>
+<li>把字符串映射成一个 p 进制数字。<br>对于一个长度为 n 的字符串 s，<br>这样定义 Hash 函数：<code>h(s) = ∑(i=1 to n) s[i] × p^(n-i) (mod M)</code><br>例如，字符串 abc，其哈希函数值为 <code>a*p^2 + b*p^1 + c</code><br>即 <code>97 × 131^2 + 98 × 131^1 + 99</code></li>
+<li>如果两字符串不一样，Hash 函数值却一样，这样的现象称为<strong>哈希碰撞</strong>。</li>
+<li>解决哈希碰撞的方法：<br>(1) p 通常取质数 131 或 13331<br>(2) M 通常取大整数 2^64，把哈希函数值 h 定义为 ULL，超过则自动溢出，等价于取模。</li>
+</ol>
+<p>求一个字符串的哈希值相当于求前缀和，求一个字符串的子串的哈希值相当于求区间和。</p>
+<h1 id="最小表示法"><a href="#最小表示法" class="headerlink" title="最小表示法"></a>最小表示法</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>当字符串 S 中选定一个位置 i 满足 S[i<del>n] + S[1</del>i-1] &#x3D; T，则 T 是 S 的循环同构串。</p>
+<p>设 S &#x3D; “BCAD”，其循环同构串有“BCAD”、“CADB”、“ADBC”、“DBCA”， 当 i&#x3D;3 时，得到字典序最小的循环同构串是“ADBC”。</p>
+<p><strong>最小表示法</strong>就是找出字符串 S 的循环同构串中字典序最小的那一个。</p>
+<p>对于循环串（或环），通常的技巧就是复制一倍，<strong>破环成链</strong>，然后扫描。 用三个变量指针控制扫描，指针 i,j 控制匹配起始位置，指针 k 控制匹配长度。</p>
+<h2 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h2><ol>
+<li>把字符串复制一倍</li>
+<li>初始化指针 i&#x3D;1，j&#x3D;2，匹配长度k&#x3D;0；</li>
+<li>比较s[i+k]和s[j+k]是否相等，<br>(1)s[i+k]&#x3D;&#x3D;s[j+k]，则 k++;<br>(2)s[i+k]&gt;s[j+k]，则 i&#x3D;i+k+1；<br>(3)s[i+k]&lt;s[j+k]，则 j&#x3D;j+k+1；<br>若跳转后两个指针相同，则 j++，以<br>确保比较的两个字符串不同；</li>
+<li>重复上述过程，直到比较结束；</li>
+<li>答案为 min(i, j)。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 3000010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,a[MAXN*<span class="number">2</span>];</span><br><span class="line"><span class="type">int</span> i=<span class="number">1</span>,j=<span class="number">2</span>,k=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line">        a[i+n]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=n &amp;&amp; j&lt;=n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i==j)</span><br><span class="line">        &#123;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(k&lt;n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i+k]==a[j+k]) k++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i+k]&gt;a[j+k]) i+=k<span class="number">+1</span>;</span><br><span class="line">        <span class="keyword">else</span> j+=k<span class="number">+1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> s;</span><br><span class="line">    <span class="keyword">if</span>(a[i]&gt;a[j]) s=j;</span><br><span class="line">    <span class="keyword">else</span> s=i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> t=<span class="number">0</span>;t&lt;n;t++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;a[s+t]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h1><p>给定一个模式串P和一个主串S，求模式串P在主串S中出现的位置。（字符串的下标均从1开始）</p>
+<ol>
+<li>取最长的相等前后缀，可以保证不漏解。</li>
+<li>通过模式串前后缀的自我匹配的长度，计算 next 函数，给 j 指针打一张表，失配时就跳到 next[j] 的位置继续匹配。</li>
+</ol>
+<h2 id="next函数"><a href="#next函数" class="headerlink" title="next函数"></a>next函数</h2><p>next[i] 表示模式串 P[1..i] 中相等前后缀的最长长度</p>
+<p>P             a a b a a b a a a a<br>ne[1]&#x3D;0  a<br>ne[2]&#x3D;1  a a<br>ne[3]&#x3D;0  a a b<br>ne[4]&#x3D;1  a a b a<br>ne[5]&#x3D;2  a a b a a<br>ne[6]&#x3D;3  a a b a a b<br>ne[7]&#x3D;4  a a b a a b a<br>ne[8]&#x3D;5  a a b a a b a a<br>ne[9]&#x3D;2  a a b a a b a a a<br>ne[10]&#x3D;2 a a b a a b a a a a</p>
+<p>定义双指针：i 扫描模式串，j 扫描前缀。<br>初始化，ne[1]&#x3D;0, i&#x3D;2, j&#x3D;0。<br>每轮 for 循环，i 向右走一步。</p>
+<ol>
+<li>若 P[i]!&#x3D;P[j+1]，让 j 回跳到能匹配的位置，<br>如果找不到能匹配的位置，j 回跳到 0。</li>
+<li>若 P[i]&#x3D;&#x3D;P[j+1]，让 j+1，指向匹配前缀的末尾。</li>
+<li>next[i] 等于 j 的值。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; p[i<span class="number">-1</span>]!=p[j]) j=nxt[j];</span><br><span class="line">    <span class="keyword">if</span>(p[i<span class="number">-1</span>]==p[j]) j++;</span><br><span class="line">    nxt[i]=j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/image-20250323152907285.png" alt="next函数过程"></p>
+<h2 id="模式串与主串匹配"><a href="#模式串与主串匹配" class="headerlink" title="模式串与主串匹配"></a>模式串与主串匹配</h2><p>双指针：i 扫描主串，j 扫描模式串。<br>初始化，i&#x3D;1, j&#x3D;0。<br>每轮 for，i 向右走一步。</p>
+<ol>
+<li>若S[i]!&#x3D;P[j+1]，让 j 回跳到能匹配的位置，<br>如果找不到能匹配的位置，j 回跳到 0。</li>
+<li>若S[i]&#x3D;&#x3D;P[j+1]，让 j 向右走一步。</li>
+<li>若匹配成功，输出匹配位置。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=m;i++)&#123;</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; s[i<span class="number">-1</span>]!=p[j]) j=nxt[j];</span><br><span class="line">    <span class="keyword">if</span>(s[i<span class="number">-1</span>]==p[j]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j==n) cout&lt;&lt;i-n<span class="number">+1</span>&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/image-20250323153342268.png" alt="模式串匹配过程"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/tarjan/" rel="prev" title="Tarjan三兄弟">
+      <i class="fa fa-chevron-left"></i> Tarjan三兄弟
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C"><span class="nav-number">1.</span> <span class="nav-text">字符串哈希</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">算法流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">最小表示法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B-1"><span class="nav-number">2.2.</span> <span class="nav-text">算法流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KMP"><span class="nav-number">3.</span> <span class="nav-text">KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">next函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%E4%B8%B2%E4%B8%8E%E4%B8%BB%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="nav-number">3.2.</span> <span class="nav-text">模式串与主串匹配</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yuzh</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuzh</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'Woo8djp4cPIb7JjuvOWlehG5-gzGzoHsz',
+      appKey     : 'PAUZpKb8NBT691TMRsHPdnMS',
+      placeholder: "说点什么吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
