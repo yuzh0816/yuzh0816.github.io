@@ -60,12 +60,6 @@
 // stays mounted.  The class is applied after PJAX swaps in the new markup so
 // it also works when navigating with browser back/forward buttons.
 window.addEventListener('pjax:success', () => {
-  // PJAX replaces page fragments without rebuilding the document body. Re-
-  // assert the global background state so navigation behaves like a fresh
-  // load, regardless of page-specific styles in the swapped fragment.
-  document.body.style.setProperty('background-color', '#fff', 'important');
-  document.body.style.setProperty('background-image', 'linear-gradient(to bottom, rgba(255,255,255,.98) 0%, rgba(255,255,255,.82) 34%, rgba(255,255,255,.42) 68%, rgba(255,255,255,0) 100%)', 'important');
-  document.body.style.setProperty('background-attachment', 'fixed', 'important');
   var contentWrap = document.querySelector('.content-wrap');
   if (!contentWrap) return;
   contentWrap.classList.remove('pjax-slide-in');
